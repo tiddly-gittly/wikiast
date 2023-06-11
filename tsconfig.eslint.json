@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "packages/**/*.ts",
+    "test/**/*.ts",
+    "packages/**/*.js",
+    "packages/**/*.tsx",
+    "demo/**/*.ts",
+    "demo/**/*.tsx",
+    "demo/**/*.js",
+    "features/**/*.ts",
+    "scripts/**/*.ts",
+    "scripts/**/*.mjs",
+    "scripts/**/*.js",
+    "packages/**/*.d.ts",
+    "demo/**/*.d.ts",
+    "test/**/*.mjs",
+    "./*.json",
+    "./*.js",
+    ".eslintrc.js"
+  ],
+  "exclude": ["template/**/*.js", "src/services/libs/i18n/i18next-electron-fs-backend.ts"]
+}
