@@ -1,10 +1,10 @@
 import cloneDeep from 'lodash/cloneDeep';
+import repeat from 'lodash/repeat';
 import type { IParseTreeNode } from 'tiddlywiki';
 import { parents } from 'unist-util-parents';
-import { builders, IBuilders } from '../astSerializer';
 import { dropExtraTailingN } from '../../ast-utils/src/dropExtraTailingN';
-import { convertNodes, convertOneNode } from './traverse';
-import repeat from 'lodash/repeat';
+import { builders, type IBuilders } from './astSerializer';
+import { convertNodes, type convertOneNode } from './traverse';
 
 export type IAnyBuilder = IBuilders & Record<string, typeof convertOneNode>;
 

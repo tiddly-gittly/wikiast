@@ -1,5 +1,5 @@
-import { wikiAstToWikiText } from '../src';
 import { wikiAstDict, wikiTextDict } from '../../../test/constants';
+import { wikiAstToWikiText } from '../src';
 
 describe('wikiAstToWikiText', () => {
   test('it works', () => {
