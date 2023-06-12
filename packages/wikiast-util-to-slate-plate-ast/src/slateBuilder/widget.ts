@@ -1,8 +1,8 @@
-import { TElement } from '@udecode/plate-core';
+import { type TElement } from '@udecode/plate-core';
 import type { ICustomParseTreeNode } from 'tiddlywiki';
 
-import { ELEMENT_WIDGET } from '../../../editor/plugins/widget';
-import { IContext } from '..';
+import { ELEMENT_WIDGET } from 'wikiast-utils';
+import { type IContext } from '..';
 
 /**
  * Render result as TW widget, instead of pure React component.

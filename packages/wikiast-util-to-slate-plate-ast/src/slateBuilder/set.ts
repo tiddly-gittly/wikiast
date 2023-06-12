@@ -1,9 +1,9 @@
-import { TElement } from '@udecode/plate-core';
+import { type TElement } from '@udecode/plate-core';
 import type { ICustomParseTreeNode } from 'tiddlywiki';
 
-import { ELEMENT_SET } from '../../../editor/plugins/set';
+import { ELEMENT_SET } from 'wikiast-utils';
+import { type IContext } from '..';
 import { convertNodes } from '../traverse';
-import { IContext } from '..';
 
 /**
  * Render result as TW macrocall, and a dot that open a code editor on click.

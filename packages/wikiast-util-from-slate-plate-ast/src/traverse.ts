@@ -1,8 +1,8 @@
-import { TNode, isText, isElement } from '@udecode/plate-core';
-import { IParseTreeNode } from 'tiddlywiki';
+import { isElement, isText, type TNode } from '@udecode/plate-core';
+import { type IParseTreeNode } from 'tiddlywiki';
 
-import { IBuilders } from './wikiAstBuilder';
-import { getSlatePlateASTAdditionalProperties } from '../ast-utils/src/getNodeAdditionalProperties';
+import { getSlatePlateASTAdditionalProperties } from 'wikiast-utils';
+import { type IBuilders } from './wikiAstBuilder';
 
 export type IAnyBuilder = IBuilders & Record<string, typeof convertWikiAstNode>;
 

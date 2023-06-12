@@ -4,11 +4,12 @@ import htmlTags from 'html-tags';
 import { codeblock } from './codeblock';
 import { element } from './element';
 import { lic } from './lic';
+import { set } from './set';
 import { text } from './text';
 import { widget } from './widget';
-import { set } from './set';
 
 export const ELEMENT_CODE_BLOCK = 'codeblock';
+type IElementBuilders = Record<keyof HTMLElementTagNameMap, typeof element>;
 
 /**
  * Key is `node.type`, value is node converter function.
@@ -33,5 +34,3 @@ export const builders = {
 };
 
 export type IBuilders = typeof builders;
-
-type IElementBuilders = Record<keyof HTMLElementTagNameMap, typeof element>;

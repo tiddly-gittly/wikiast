@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
-import { TNode } from '@udecode/plate-core';
-import { ICustomParseTreeNode, IParseTreeNode } from 'tiddlywiki';
+import { type TNode } from '@udecode/plate-core';
+import { type ICustomParseTreeNode, type IParseTreeNode } from 'tiddlywiki';
 import type { IContext } from '.';
 
-import { IBuilders } from './slateBuilder';
-import { getWikiASTAdditionalProperties } from '../ast-utils/src/getNodeAdditionalProperties';
+import { getWikiASTAdditionalProperties } from 'wikiast-utils';
+import { type IBuilders } from './slateBuilder';
 
 export type IAnyBuilder = IBuilders & Record<string, typeof slateNode>;
 

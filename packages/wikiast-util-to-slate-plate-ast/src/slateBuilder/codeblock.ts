@@ -1,8 +1,8 @@
-import { TElement } from '@udecode/plate-core';
+import { type TElement } from '@udecode/plate-core';
 import type { ICodeBlockParseTreeNode } from 'tiddlywiki';
 
-import { ELEMENT_CODE_BLOCK } from '../../../editor/plugins/codeblock/constants';
-import { IContext } from '..';
+import { ELEMENT_CODE_BLOCK } from 'wikiast-utils';
+import { type IContext } from '..';
 
 /**
  * Our custom code block plate ast

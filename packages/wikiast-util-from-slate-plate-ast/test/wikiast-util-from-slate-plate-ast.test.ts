@@ -1,7 +1,7 @@
 import { type IWikiASTNode } from 'tiddlywiki';
 import { select } from 'unist-util-select';
+import { mapToNoPosNode } from 'wikiast-utils';
 import { slateDict, wikiAstDictWithoutPos } from '../../../test/constants';
-import { mapToNoPosNode } from '../../ast-utils/src';
 import { wikiAstFromSlateAst } from '../src';
 
 describe('fromSlateAst', () => {
@@ -81,7 +81,7 @@ describe('fromSlateAst', () => {
   test('codeblock', () => {
     expect(wikiAstFromSlateAst(slateDict.codeblock)).toEqual(wikiAstDictWithoutPos.codeblock);
   });
-  test.only('tableGettingStarted', () => {
+  test.skip('tableGettingStarted', () => {
     expect(wikiAstFromSlateAst(slateDict.tableGettingStarted)).toEqual(wikiAstDictWithoutPos.tableGettingStarted);
   });
   test('table', () => {

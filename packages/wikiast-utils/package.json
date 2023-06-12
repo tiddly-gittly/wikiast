@@ -8,7 +8,8 @@
   "url": "https://github.com/tiddly-gittly/wikiast",
   "scripts": {
     "build": "rollup --config rollup.config.ts --configPlugin swc3",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config=jest.config.js"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config=jest.config.js",
+    "generate-barrels": "barrelsby --delete -l all -d ./src"
   },
   "repository": {
     "type": "git",

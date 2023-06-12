@@ -1,8 +1,8 @@
-import { TElement } from '@udecode/plate-core';
+import { type TElement } from '@udecode/plate-core';
 import type { ICustomParseTreeNode } from 'tiddlywiki';
 
-import { ELEMENT_MACRO } from '../../../editor/plugins/macro';
-import { IContext } from '..';
+import { ELEMENT_MACRO } from 'wikiast-utils';
+import { type IContext } from '..';
 
 /**
  * Render result as TW macrocall, instead of pure React component.

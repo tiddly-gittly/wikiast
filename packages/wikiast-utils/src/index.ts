@@ -8,3 +8,4 @@ export * from "./mapAttributes";
 export * from "./mapToNoPosNode";
 export * from "./mergeAdjacent";
 export * from "./metadata";
+export * from "./wikiastTypeNames";

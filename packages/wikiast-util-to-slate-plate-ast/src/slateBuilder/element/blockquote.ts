@@ -1,9 +1,9 @@
 /**
  * This is an example of custom element processing. The logic here is the same as `src/transform/wikiast-util-to-slate-plate-ast/slateBuilder/element/index.ts`, purely for example.
  */
-import { TElement } from '@udecode/plate-core';
+import { type TElement } from '@udecode/plate-core';
 import type { IDomParseTreeNode } from 'tiddlywiki';
-import { IContext } from '../..';
+import { type IContext } from '../..';
 import { convertNodes } from '../../traverse';
 import { mergeSiblingTexts } from '../text';
 
@@ -19,5 +19,5 @@ export function blockquote(context: IContext, node: IDomParseTreeNode): TElement
     type: node.tag,
     children,
   };
-  return mergeSiblingTexts(result);
+  return mergeSiblingTexts(result as TElement);
 }

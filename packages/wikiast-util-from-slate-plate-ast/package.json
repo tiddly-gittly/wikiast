@@ -7,8 +7,9 @@
   "main": "dist/index.mjs",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "zx scripts/build.mjs",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config=jest.config.js"
+    "build": "rollup --config rollup.config.ts --configPlugin swc3",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest -c ./jest.config.ts",
+    "generate-barrels": "barrelsby --delete -q -l branch -d src --exclude .+\\.d\\.ts && dprint fmt **/index.ts"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
   },
   "homepage": "https://github.com/tiddly-gittly/wikiast#readme",
   "dependencies": {
+    "wikiast-utils": "workspace:^"
   },
   "devDependencies": {
   }

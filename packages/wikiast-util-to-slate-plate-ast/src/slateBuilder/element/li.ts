@@ -4,9 +4,9 @@
  */
 import type { TElement, TNode } from '@udecode/plate-core';
 import { ELEMENT_LI, ELEMENT_LIC } from '@udecode/plate-list';
-import { mergeAdjacent } from '../../../../transform/ast-utils/mergeAdjacent';
-import type { IDomParseTreeNode, ITextParseTreeNode } from 'tiddlywiki';
-import { IContext } from '../..';
+import type { IDomParseTreeNode, ITextParseTreeNode, IWikiASTNode } from 'tiddlywiki';
+import { mergeAdjacent } from 'wikiast-utils';
+import { type IContext } from '../..';
 import { convertNodes } from '../../traverse';
 
 export interface IListItemDomParseTreeNode extends IDomParseTreeNode {
@@ -25,7 +25,7 @@ export function li(context: IContext, node: IDomParseTreeNode): TElement {
 
   // wikiast have li > text, but slate-plate-ast have li > lic > text
   // and merge multiple lic > text created by the flatMap, into a single lic containing multiple text
-  const childrenWithLicMerged = mergeAdjacent(childrenWithLic, ELEMENT_LIC) as TElement[];
+  const childrenWithLicMerged = mergeAdjacent(childrenWithLic as unknown as Array<(IWikiASTNode | TNode) & { children: TNode[] }>, ELEMENT_LIC) as TElement[];
   const childrenWithLicPadded = childrenWithLicMerged.map((child: TElement) => {
     if (child.type === ELEMENT_LIC) {
       if (child.children.length > 0) {
@@ -33,7 +33,7 @@ export function li(context: IContext, node: IDomParseTreeNode): TElement {
         if (!child.children[0].text) {
           child.children.push({ text: '' });
         }
-        if (!child.children[child.children.length - 1].text) {
+        if (!(child.children.at(-1)?.text)) {
           child.children.unshift({ text: '' });
         }
       } else {
