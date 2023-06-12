@@ -1,5 +1,5 @@
-import { IMacroCallParseTreeNode, IParseTreeAttribute, IParseTreeNode, IWikiASTNode } from 'tiddlywiki';
 import mapValues from 'lodash/mapValues';
+import type { IMacroCallParseTreeNode, IParseTreeAttribute, IParseTreeNode, IWikiASTNode } from 'tiddlywiki';
 import { map } from 'unist-util-map';
 
 const removeStartEnd = <T extends ({ end?: number; start?: number } & Record<string, any>) | IParseTreeNode>(node: T): T => {
@@ -37,7 +37,14 @@ const removeStartEnd = <T extends ({ end?: number; start?: number } & Record<str
 };
 export const mapToNoPosNode = (ast: IWikiASTNode): IParseTreeNode =>
   map(ast, (node) => {
-    const newNode = removeStartEnd(node);
+    /**
+     * Silly rollup-plugin-dts report this error, have to `as` to avoid it
+     * src/mapToNoPosNode.ts(39,12): error TS2345: Argument of type '(node: IWikiASTNode) => IWikiASTNode' is not assignable to parameter of type 'MapFunction<IWikiASTNode>'.
+  Types of parameters 'node' and 'node' are incompatible.
+    Type 'unknown' is not assignable to type 'IWikiASTNode'.
+     */
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+    const newNode = removeStartEnd(node as IWikiASTNode);
 
     // keys alone side with `children`
     const recordKeys = ['attributes'] as const;
@@ -53,4 +60,4 @@ export const mapToNoPosNode = (ast: IWikiASTNode): IParseTreeNode =>
       }
     }
     return newNode;
-  }) as unknown as IParseTreeNode;
+  });

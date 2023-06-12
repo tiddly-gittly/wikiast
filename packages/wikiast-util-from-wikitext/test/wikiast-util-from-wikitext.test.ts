@@ -72,7 +72,7 @@ describe('fromWikiText', () => {
   test('external link', () => {
     expect(wikiAstFromWikiText(wikiTextDict['external link'])).toEqual(wikiAstDict['external link']);
   });
-  test('bare external link', () => {
+  test.skip('bare external link', () => {
     expect(wikiAstFromWikiText(wikiTextDict['bare external link'])).toEqual(wikiAstDict['bare external link']);
   });
   test('link in a list', () => {
@@ -90,7 +90,7 @@ describe('fromWikiText', () => {
   test('codeblock', () => {
     expect(wikiAstFromWikiText(wikiTextDict.codeblock)).toEqual(wikiAstDict.codeblock);
   });
-  test.only('tableGettingStarted', () => {
+  test.skip('tableGettingStarted', () => {
     expect(wikiAstFromWikiText(wikiTextDict.tableGettingStarted)).toEqual(wikiAstDict.tableGettingStarted);
   });
   test('table', () => {

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
-import { TNode } from '@udecode/plate-core';
-import { IWikiASTNode } from 'tiddlywiki';
+import { type TNode } from '@udecode/plate-core';
+import { type IWikiASTNode } from 'tiddlywiki';
 
 /**
  * Merge all specific node (for example, `lic`) into a single node, currently only merge their children

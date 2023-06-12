@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import dropRightWhile from 'lodash/dropRightWhile';
 
 /**
@@ -10,11 +11,12 @@ import dropRightWhile from 'lodash/dropRightWhile';
 export function dropExtraTailingN(tokens: string[]): string[] {
   // our code will only generate \n or \n\n so no need to test more. Add more case when code generating more cases.
   const listWithoutNToken = dropRightWhile(tokens, (token) => token === '\n' || token === '\n\n');
+  const lastToken = listWithoutNToken.at(-1);
   // we still need to remove \n from last token
-  if (listWithoutNToken[listWithoutNToken.length - 1]?.endsWith?.('\n')) {
-    listWithoutNToken[listWithoutNToken.length - 1] = listWithoutNToken[listWithoutNToken.length - 1].slice(
+  if (lastToken?.endsWith?.('\n')) {
+    listWithoutNToken[listWithoutNToken.length - 1] = lastToken.slice(
       0,
-      listWithoutNToken[listWithoutNToken.length - 1].length - 1,
+      -1,
     );
   }
   return listWithoutNToken;

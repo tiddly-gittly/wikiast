@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { TElement } from '@udecode/plate-core';
+import { type TElement } from '@udecode/plate-core';
 import pick from 'lodash/pick';
-import { IParseTreeAttribute, IParseTreeNode, IWikiASTNode } from 'tiddlywiki';
+import { type IParseTreeAttribute, type IParseTreeNode, type IWikiASTNode } from 'tiddlywiki';
 import { removeTypeFromAttributes } from './mapAttributes';
 
 /** store attribute to tw-attribute, so it can be seamlessly restore later. */

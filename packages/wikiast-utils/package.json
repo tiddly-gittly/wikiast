@@ -1,11 +1,13 @@
 {
   "description": "Get Wiki AST from SlateJS AST",
   "license": "MIT",
-  "name": "wikiast-util-from-slate-plate-ast",
+  "name": "wikiast-utils",
   "version": "0.1.0",
+  "main": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
   "url": "https://github.com/tiddly-gittly/wikiast",
   "scripts": {
-    "build": "zx scripts/build.mjs",
+    "build": "rollup --config rollup.config.ts --configPlugin swc3",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --config=jest.config.js"
   },
   "repository": {
@@ -32,18 +34,7 @@
   },
   "homepage": "https://github.com/tiddly-gittly/wikiast#readme",
   "dependencies": {
-    "@udecode/plate-core": "^19.5.0",
-    "@udecode/plate-list": "16.4.1",
-    "html-tags": "^3.2.0",
-    "lodash": "4.17.21",
-    "slate": "0.82.0",
-    "tiddlywiki": "^5.2.5",
-    "unified": "10.1.2",
-    "unist-util-find": "^1.0.2",
-    "unist-util-parents": "^2.0.0"
   },
   "devDependencies": {
-    "barrelsby": "^2.5.1",
-    "esbuild": "^0.17.10"
   }
 }

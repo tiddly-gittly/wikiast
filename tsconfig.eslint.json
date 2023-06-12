@@ -20,6 +20,7 @@
     "test/**/*.mjs",
     "./*.json",
     "./*.js",
+    "./*.ts",
     ".eslintrc.js"
   ],
   "exclude": []

@@ -1,20 +1,19 @@
-import { IParseTreeNode } from 'tiddlywiki';
-import mapValues from 'lodash/mapValues';
 import cloneDeep from 'lodash/cloneDeep';
+import mapValues from 'lodash/mapValues';
+import { type IParseTreeNode } from 'tiddlywiki';
 
-import { mapToNoPosNode } from '../../../src/transform/ast-utils/mapToNoPosNode';
-
-import { p } from './p';
-import { ol } from './ol';
-import { link } from './link';
-import { image } from './image';
+import { mapToNoPosNode } from 'wikiast-utils';
 import { codeblock } from './codeblock';
+import { heading } from './heading';
+import { image } from './image';
+import { link } from './link';
+import { macro } from './macro';
+import { ol } from './ol';
+import { p } from './p';
+import { set } from './set';
+import { table } from './table';
 import { transclude } from './transclude';
 import { widget } from './widget';
-import { heading } from './heading';
-import { macro } from './macro';
-import { table } from './table';
-import { set } from './set';
 
 export const wikiAstDict: Record<string, IParseTreeNode[] | IParseTreeNode> = {
   ...p,
@@ -30,6 +29,7 @@ export const wikiAstDict: Record<string, IParseTreeNode[] | IParseTreeNode> = {
   ...set,
 };
 
-export const wikiAstDictWithoutPos = mapValues(cloneDeep(wikiAstDict), (ast: IParseTreeNode | IParseTreeNode[]) =>
-  Array.isArray(ast) ? ast.map((aAst) => mapToNoPosNode(aAst)) : mapToNoPosNode(ast),
+export const wikiAstDictWithoutPos = mapValues(
+  cloneDeep(wikiAstDict),
+  (ast: IParseTreeNode | IParseTreeNode[]) => Array.isArray(ast) ? ast.map((aAst) => mapToNoPosNode(aAst)) : mapToNoPosNode(ast),
 ) as typeof wikiAstDict;
