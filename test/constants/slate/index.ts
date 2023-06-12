@@ -1,15 +1,15 @@
-import { TEditor, Value, TElement, TText } from '@udecode/plate-core';
+import { type TEditor, type TElement, type TText, type Value } from '@udecode/plate-core';
 
-import { image } from './image';
-import { ol } from './ol';
-import { transclude } from './transclude';
 import { codeblock } from './codeblock';
-import { widget } from './widget';
-import { link } from './link';
 import { heading } from './heading';
+import { image } from './image';
+import { link } from './link';
 import { macro } from './macro';
-import { table } from './table';
+import { ol } from './ol';
 import { set } from './set';
+import { table } from './table';
+import { transclude } from './transclude';
+import { widget } from './widget';
 
 /**
  * Get value by adding `console.log(`newValue`, newValue);` in `onSave` of `src/components/editor.tsx`.

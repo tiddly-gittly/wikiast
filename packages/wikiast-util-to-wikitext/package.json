@@ -1,0 +1,31 @@
+{
+  "name": "wikiast-util-to-wikitext",
+  "version": "0.0.1",
+  "description": "Tiddlywiki wikiast serializer",
+  "type": "module",
+  "main": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin swc3",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest -c jest.config.ts",
+    "generate-barrels": "barrelsby --delete -q -l branch -d src --exclude .+\\.d\\.ts && dprint fmt **/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiddly-gittly/wikiast.git"
+  },
+  "keywords": [
+    "openai",
+    "chatgpt"
+  ],
+  "author": "linonetwo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tiddly-gittly/wikiast/issues"
+  },
+  "homepage": "https://github.com/tiddly-gittly/wikiast#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
