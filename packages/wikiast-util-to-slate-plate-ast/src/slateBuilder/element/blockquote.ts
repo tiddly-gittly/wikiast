@@ -3,7 +3,7 @@
  */
 import { type TElement } from '@udecode/plate-core';
 import type { IDomParseTreeNode } from 'tiddlywiki';
-import { type IContext } from '../..';
+import type { IContext } from '../..';
 import { convertNodes } from '../../traverse';
 import { mergeSiblingTexts } from '../text';
 

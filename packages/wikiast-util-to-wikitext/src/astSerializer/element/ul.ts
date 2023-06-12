@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import type { IDomParseTreeNode } from 'tiddlywiki';
-import { convertNodes } from '../../src/traverse';
-import type { IContext, IWithParent } from '../../src';
-import { dropExtraTailingN } from '../../../token-stream-utils/dropExtraTailingN';
+import { dropExtraTailingN } from 'wikiast-utils';
+import type { IContext, IWithParent } from '../..';
+import { convertNodes } from '../../traverse';
 
 export function ul(context: IContext, { tag, children, parent }: IDomParseTreeNode & IWithParent): string[] {
   // the initial indentation is -1, so we can add 1
@@ -12,7 +13,7 @@ export function ul(context: IContext, { tag, children, parent }: IDomParseTreeNo
   const result = convertNodes(context, children);
   context.indentLevels -= 1;
   // if next sibling is not a list, we quit the list mode
-  const tagOfNextSibling = (parent?.children?.[context.index] as IDomParseTreeNode | undefined)?.tag;
+  const tagOfNextSibling = parent && 'children' in parent ? (parent?.children?.[context.index] as IDomParseTreeNode | undefined)?.tag : undefined;
   if (tagOfNextSibling !== 'ul' && tagOfNextSibling !== 'ol' && tagOfNextSibling !== 'li') {
     context.listMode = undefined;
   }
@@ -25,10 +26,10 @@ export function ul(context: IContext, { tag, children, parent }: IDomParseTreeNo
     needExtraN = !(((tagOfNextSibling === 'ul' || tagOfNextSibling === 'ol') && tagOfNextSibling !== tag) || tagOfNextSibling === 'blockquote');
   }
   const listResultWithN = needExtraN
-    ? // add empty line between list and following non-list content
-      [...dropExtraTailingN(result), '\n']
-    : // change line if we are nested list (means this ol is inside a li, and should change line), see test case `ol > li > mark > text` for example
-      [alreadyInList ? '\n' : '', ...result];
+    // add empty line between list and following non-list content
+    ? [...dropExtraTailingN(result), '\n']
+    // change line if we are nested list (means this ol is inside a li, and should change line), see test case `ol > li > mark > text` for example
+    : [alreadyInList ? '\n' : '', ...result];
 
   return listResultWithN;
 }

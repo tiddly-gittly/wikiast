@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import type { ICustomParseTreeNode, IMacroCallParseTreeNode } from 'tiddlywiki';
-import { convertNodes } from '../src/traverse';
-import { IContext } from '../src';
+import type { IContext } from '..';
+import { convertNodes } from '../traverse';
 
 /** the `\define tags-of-current-tiddler() {{!!tags}}` or the `<$set name=animal value=zebra>` */
 export function set(context: IContext, node: IMacroCallParseTreeNode): string[] {

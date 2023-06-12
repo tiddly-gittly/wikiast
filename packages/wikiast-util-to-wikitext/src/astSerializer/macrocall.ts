@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import type { ICustomParseTreeNode, IMacroCallParseTreeNode } from 'tiddlywiki';
-import { IContext } from '../src';
+import type { IContext } from '..';
 
 /** the `<<xxx >>` or the `<$macrocall $name="xxx"` */
 export function macrocall(context: IContext, node: IMacroCallParseTreeNode): string[] {

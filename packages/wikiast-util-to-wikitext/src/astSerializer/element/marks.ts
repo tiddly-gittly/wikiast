@@ -1,6 +1,6 @@
 import type { IDomParseTreeNode } from 'tiddlywiki';
-import { IContext } from '../../src';
-import { convertNodes } from '../../src/traverse';
+import type { IContext } from '../..';
+import { convertNodes } from '../../traverse';
 
 const markTypeMap = {
   strong: `''`,

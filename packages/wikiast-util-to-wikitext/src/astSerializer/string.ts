@@ -1,5 +1,5 @@
 import type { IParseTreeAttribute } from 'tiddlywiki';
-import { IContext } from '../src';
+import type { IContext } from '..';
 
 /**
  * parse string type of `orderedAttributes` param

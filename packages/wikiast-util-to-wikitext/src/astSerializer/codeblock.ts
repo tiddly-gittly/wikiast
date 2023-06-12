@@ -1,5 +1,5 @@
 import type { ICodeBlockParseTreeNode } from 'tiddlywiki';
-import { IContext } from '../src';
+import type { IContext } from '..';
 
 /**
  * This is a parameter type

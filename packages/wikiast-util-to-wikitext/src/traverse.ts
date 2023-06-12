@@ -1,4 +1,4 @@
-import { ICustomParseTreeNode, IParseTreeNode } from 'tiddlywiki';
+import type { ICustomParseTreeNode, IParseTreeNode } from 'tiddlywiki';
 import type { IContext } from '.';
 
 export function convertNodes(context: IContext, nodes: IParseTreeNode[] | undefined): string[] {
@@ -37,5 +37,5 @@ export function convertOneNode(context: IContext, node: IParseTreeNode): string[
       result = builders.widget(context, node as ICustomParseTreeNode);
     }
   }
-  return node.isBlock === true ? [...result, '\n'] : result;
+  return 'isBlock' in node && node.isBlock === true ? [...result, '\n'] : result;
 }

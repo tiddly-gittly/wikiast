@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import type { ITextParseTreeNode } from 'tiddlywiki';
-import { IContext } from '../src';
+import type { IContext } from '..';
 
 export function image(context: IContext, node: ITextParseTreeNode): string[] {
   const width = node.attributes?.width !== undefined ? ` width=${String(node.attributes.width.value)}` : '';

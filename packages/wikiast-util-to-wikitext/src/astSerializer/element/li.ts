@@ -1,8 +1,8 @@
 import type { IDomParseTreeNode } from 'tiddlywiki';
 import repeat from 'lodash/repeat';
 import find from 'unist-util-find';
-import { convertNodes } from '../../src/traverse';
-import { IContext } from '../../src';
+import type { IContext } from '../..';
+import { convertNodes } from '../../traverse';
 
 export function li(context: IContext, node: IDomParseTreeNode): string[] {
   const listItemDot = context.listMode === 'ul' ? '*' : '#';

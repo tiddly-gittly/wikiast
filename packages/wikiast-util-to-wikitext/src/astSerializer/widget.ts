@@ -1,5 +1,5 @@
 import type { ICustomParseTreeNode } from 'tiddlywiki';
-import { IContext } from '../src';
+import type { IContext } from '..';
 
 /**
  * 

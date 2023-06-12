@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import repeat from 'lodash/repeat';
 import type { IDomParseTreeNode } from 'tiddlywiki';
-import { IContext } from '../../src';
-import { convertNodes } from '../../src/traverse';
+import type { IContext } from '../..';
+import { convertNodes } from '../../traverse';
 
 /**
  * Basic h1 tag will turn into `! xxx`

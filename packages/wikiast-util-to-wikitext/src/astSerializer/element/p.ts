@@ -1,6 +1,6 @@
 import type { IDomParseTreeNode } from 'tiddlywiki';
-import { convertNodes } from '../../src/traverse';
-import { IContext } from '../../src';
+import type { IContext } from '../..';
+import { convertNodes } from '../../traverse';
 
 /**
  * P can be omitted, just return the children with `\n`, so wikitext result will have \n\n

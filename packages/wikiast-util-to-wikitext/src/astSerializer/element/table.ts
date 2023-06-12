@@ -1,6 +1,6 @@
 import type { IDomParseTreeNode } from 'tiddlywiki';
-import { convertNodes } from '../../src/traverse';
-import { IContext } from '../../src';
+import type { IContext } from '../..';
+import { convertNodes } from '../../traverse';
 
 /**
  * table can be omitted

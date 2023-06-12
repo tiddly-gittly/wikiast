@@ -1,5 +1,5 @@
 import type { ILinkParseTreeNode, ITextParseTreeNode } from 'tiddlywiki';
-import { IContext } from '../src';
+import type { IContext } from '..';
 
 export interface ILinkOptions {
   prefix?: string;

@@ -2,7 +2,7 @@ import cloneDeep from 'lodash/cloneDeep';
 import repeat from 'lodash/repeat';
 import type { IParseTreeNode } from 'tiddlywiki';
 import { parents } from 'unist-util-parents';
-import { dropExtraTailingN } from '../../ast-utils/src/dropExtraTailingN';
+import { dropExtraTailingN } from 'wikiast-utils';
 import { builders, type IBuilders } from './astSerializer';
 import { convertNodes, type convertOneNode } from './traverse';
 
