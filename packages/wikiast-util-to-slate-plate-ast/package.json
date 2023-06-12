@@ -1,13 +1,13 @@
 {
   "description": "Get Wiki AST from SlateJS AST",
   "license": "MIT",
-  "name": "wikiast-util-from-slate-plate-ast",
+  "name": "wikiast-util-to-slate-plate-ast",
   "version": "0.1.0",
-  "url": "https://github.com/tiddly-gittly/wikiast",
   "main": "dist/index.mjs",
   "typings": "dist/index.d.ts",
+  "url": "https://github.com/tiddly-gittly/wikiast",
   "scripts": {
-    "build": "zx scripts/build.mjs",
+    "build": "rollup --config rollup.config.ts --configPlugin swc3",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --config=jest.config.js"
   },
   "repository": {
