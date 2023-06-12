@@ -6,8 +6,7 @@
   "url": "https://github.com/tiddly-gittly/wikiast",
   "scripts": {
     "build": "zx scripts/build.mjs",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config=jest.config.js",
-    "generate-barrels": "barrelsby --delete -l all -d src"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config=jest.config.js"
   },
   "repository": {
     "type": "git",

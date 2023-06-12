@@ -2,7 +2,11 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build": "esbuild"
+    "build": "rollup --config rollup.config.ts --configPlugin swc3",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest -c jest.config.ts",
+    "barrels": "npm run generate-barrels-subdir && npm run generate-barrels-flat",
+    "generate-barrels-subdir": "barrelsby --delete -q -l branch -d packages --exclude \".+\\.d\\.ts|node_modules\" && dprint fmt **/index.ts",
+    "generate-barrels-flat": "barrelsby --delete -l all -d ./packages/ast-utils/src"
   },
   "workspaces": [
     "packages/*"
