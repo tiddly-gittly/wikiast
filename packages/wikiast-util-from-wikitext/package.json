@@ -28,5 +28,10 @@
   "dependencies": {
   },
   "devDependencies": {
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public",
+    "provenance": true
   }
 }
