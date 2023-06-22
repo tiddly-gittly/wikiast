@@ -12,7 +12,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tiddly-gittly/wikiast.git"
+    "url": "git+https://github.com/tiddly-gittly/wikiast.git",
+    "directory": "packages/wikiast-util-to-wikitext"
   },
   "keywords": [
     "openai",
