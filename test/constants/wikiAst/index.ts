@@ -15,7 +15,7 @@ import { table } from './table';
 import { transclude } from './transclude';
 import { widget } from './widget';
 
-export const wikiAstDict: Record<string, IParseTreeNode[] | IParseTreeNode> = {
+export const wikiAstDict: Record<string, IParseTreeNode | IParseTreeNode[]> = {
   ...p,
   ...ol,
   ...image,
