@@ -18,7 +18,7 @@
     "directory": "packages/wikiast-utils"
   },
   "files": [
-    "dist/index.mjs",
+    "dist/**/*.mjs",
     "dist/**/*.d.ts",
     "README.md"
   ],

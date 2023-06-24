@@ -1,6 +1,6 @@
 {
   "name": "wikiast-util-to-wikitext",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Tiddlywiki wikiast serializer",
   "type": "module",
   "main": "dist/index.mjs",
@@ -16,6 +16,11 @@
     "url": "git+https://github.com/tiddly-gittly/wikiast.git",
     "directory": "packages/wikiast-util-from-wikitext"
   },
+  "files": [
+    "dist/**/*.mjs",
+    "dist/**/*.d.ts",
+    "README.md"
+  ],
   "keywords": [
     "openai",
     "chatgpt"
