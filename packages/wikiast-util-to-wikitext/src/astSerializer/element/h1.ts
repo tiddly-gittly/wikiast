@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
-import repeat from 'lodash/repeat';
 import type { IDomParseTreeNode } from 'tiddlywiki';
 import type { IContext } from '../..';
 import { convertNodes } from '../../traverse';
@@ -12,7 +11,7 @@ export function h1(context: IContext, node: IDomParseTreeNode): string[] {
   if (!attributes?.class?.value) {
     // don't need a html tag to render
     const level = Number(tag.replace('h', ''));
-    return [repeat('!', level), ' ', ...convertNodes(context, children), '\n'];
+    return ['!'.repeat(level), ' ', ...convertNodes(context, children), '\n'];
   }
   // is real a tag
   const jsxResult = context.builders.jsx(context, node);

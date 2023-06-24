@@ -6,7 +6,7 @@
  */
 const dropRightWhile = (array: string[], function_: (token: string) => boolean) => {
   let rightIndex = array.length;
-  while (rightIndex-- && !function_(array[rightIndex]));
+  while (rightIndex-- && function_(array[rightIndex]));
   return array.slice(0, rightIndex + 1);
 };
 

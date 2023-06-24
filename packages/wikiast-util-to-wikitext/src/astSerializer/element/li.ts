@@ -1,4 +1,3 @@
-import repeat from 'lodash/repeat';
 import type { IDomParseTreeNode } from 'tiddlywiki';
 import find from 'unist-util-find';
 import type { IContext } from '../..';
@@ -12,5 +11,5 @@ export function li(context: IContext, node: IDomParseTreeNode): string[] {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   const isLeafLi = find({ ...node, tag: undefined }, { tag: 'li' }) === undefined;
   // add \n so list will change line automatically
-  return [`${repeat(listItemDot, context.indentLevels + 1)} ${childTextContent.join('')}`, isLeafLi ? '\n' : ''];
+  return [`${listItemDot.repeat(context.indentLevels + 1)} ${childTextContent.join('')}`, isLeafLi ? '\n' : ''];
 }
