@@ -37,6 +37,7 @@
   },
   "homepage": "https://github.com/tiddly-gittly/wikiast#readme",
   "dependencies": {
+    "wikiast-utils": "workspace:^"
   },
   "devDependencies": {
   },
