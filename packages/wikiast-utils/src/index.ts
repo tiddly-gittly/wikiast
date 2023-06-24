@@ -11,3 +11,4 @@ export * from './mapToNoPosNode';
 export * from './mergeAdjacent';
 export * from './metadata';
 export * from './wikiastTypeNames';
+export * from './lodash/index';

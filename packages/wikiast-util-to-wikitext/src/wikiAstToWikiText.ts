@@ -4,11 +4,6 @@ import { dropExtraTailingN } from 'wikiast-utils';
 import { defaultContext } from './context';
 import { convertNodes } from './traverse';
 
-/**
- * import cloneDeep from 'lodash/cloneDeep';
- */
-// const cloneDeep = <T extends object>(object: T): T => JSON.parse(JSON.stringify(object)) as T;
-
 export interface IWikiAstToWikiTextOptions {
   /** Number of extra `\n` added to the end of file. We will remove extra `\n`, so if you still need them, you have to say you want to add some of them back by this. */
   extraTailingNCount?: number;

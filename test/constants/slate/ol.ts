@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
-import { TEditor, Value, TElement, TText } from '@udecode/plate-core';
+import type { TEditor, TElement, TText, Value } from '@udecode/plate-core';
 import cloneDeep from 'lodash/cloneDeep';
 
 /**

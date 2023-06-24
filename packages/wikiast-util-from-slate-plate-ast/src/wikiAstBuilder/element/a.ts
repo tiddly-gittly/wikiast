@@ -1,7 +1,6 @@
 import { TElement } from '@udecode/plate-core';
-import pick from 'lodash/pick';
 import type { IDomParseTreeNode, ILinkParseTreeNode } from 'tiddlywiki';
-import type { ISlateAstExtraTwMarkers } from 'wikiast-utils';
+import { type ISlateAstExtraTwMarkers, pick } from 'wikiast-utils';
 import type { IBuilders } from '../../builder';
 import { convertNodes } from '../../traverse';
 
