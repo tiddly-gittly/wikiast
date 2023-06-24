@@ -1,4 +1,4 @@
-import { TElement } from '@udecode/plate-core';
+import type { TElement } from '@udecode/plate-core';
 import type { IDomParseTreeNode, ILinkParseTreeNode } from 'tiddlywiki';
 import { type ISlateAstExtraTwMarkers, pick } from 'wikiast-utils';
 import type { IBuilders } from '../../builder';

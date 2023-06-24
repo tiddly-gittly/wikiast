@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build": "",
+    "build": "pnpm -r run build",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest -c jest.config.ts",
     "generate-barrels": "pnpm -r run generate-barrels"
   },
