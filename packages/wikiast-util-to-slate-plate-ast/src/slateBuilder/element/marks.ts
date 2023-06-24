@@ -30,7 +30,6 @@ export function toggleMarkFactory(markType: keyof IContext['marks']): IToggleMar
   return toggleMark;
 }
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export const marks = {} as Record<keyof typeof markTypeMap, IToggleMarkFunction>;
 for (const markType of markTypes) {
   marks[markType] = toggleMarkFactory(markTypeMap[markType]);

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/consistent-type-assertions */
 import { TNode } from '@udecode/plate-core';
 import type { IDomParseTreeNode } from 'tiddlywiki';
 import { IContext } from '../../context';

@@ -1,6 +1,6 @@
 import { TElement } from '@udecode/plate-core';
 import type { IDomParseTreeNode, IParseTreeNode, ITextParseTreeNode } from 'tiddlywiki';
-import type { IBuilders } from '..';
+import type { IBuilders } from '../../builder';
 import { convertNodes } from '../../traverse';
 
 export function blockquote(builders: IBuilders, node: TElement): IDomParseTreeNode {

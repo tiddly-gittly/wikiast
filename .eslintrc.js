@@ -29,12 +29,12 @@ module.exports = {
     },
   },
   rules: {
+    '@typescript-eslint/consistent-type-assertions': 'off',
   },
   extends: [
     'eslint-config-tidgi',
   ],
-  plugins: [
-  ],
+  plugins: [],
   env: {
     browser: true,
     es6: true,

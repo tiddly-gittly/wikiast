@@ -1,6 +1,6 @@
-import { TText, TNode } from '@udecode/plate-core';
-import type { ITextParseTreeNode, IDomParseTreeNode } from 'tiddlywiki';
-import { IBuilders } from '.';
+import type { TNode, TText } from '@udecode/plate-core';
+import type { IDomParseTreeNode, ITextParseTreeNode } from 'tiddlywiki';
+import type { IBuilders } from '../builder';
 
 export type TTextWithMark = TText & {
   bold?: boolean;

@@ -1,6 +1,8 @@
-import { TElement } from '@udecode/plate-core';
+import type { TElement } from '@udecode/plate-core';
 import type { ICodeBlockParseTreeNode } from 'tiddlywiki';
-import type { IBuilders } from '.';
+import type { IBuilders } from '../builder';
+
+export const ELEMENT_CODE_BLOCK = 'codeblock';
 
 export function codeblock(builders: IBuilders, node: TElement): ICodeBlockParseTreeNode {
   const { code, language = '' } = node;

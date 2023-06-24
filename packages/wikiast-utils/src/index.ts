@@ -4,6 +4,8 @@
 
 export * from './dropExtraTailingN';
 export * from './getNodeAdditionalProperties';
+export * from './isElement';
+export * from './isText';
 export * from './mapAttributes';
 export * from './mapToNoPosNode';
 export * from './mergeAdjacent';

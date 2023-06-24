@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/consistent-type-assertions */
 import type { TNode, TText } from '@udecode/plate-core';
 import type { ITextParseTreeNode } from 'tiddlywiki';
 import { IContext } from '..';
@@ -18,11 +17,6 @@ function omit<T extends object = {}>(object: T, keys: string[]): Partial<T> {
 
 /** Slate node is compact, we need to filter out some keys from wikiast */
 const textLevelKeysToOmit = ['type', 'start', 'end'];
-/**
- * This version of @udecode/plate-core has no tree shaking, so copy it here until we upgrade it.
- * import { isText } from '@udecode/plate-core';
- */
-const isText = (item: unknown): item is TText => item !== null && typeof item === 'object' && 'text' in item && typeof item.text === 'string';
 
 export function text(context: IContext, text: ITextParseTreeNode): TText {
   return {
