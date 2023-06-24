@@ -13,5 +13,5 @@ export function link(context: IContext, node: ILinkParseTreeNode, options?: ILin
   } = node.attributes ?? {};
   const [{ text }] = (node.children as ITextParseTreeNode[]) ?? [];
 
-  return [`[${prefix}[`, text, to !== text ? `|${to}` : '', `]]`];
+  return [`[${prefix}[`, text, to === text ? '' : `|${to}`, `]]`];
 }

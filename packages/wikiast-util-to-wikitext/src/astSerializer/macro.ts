@@ -4,7 +4,7 @@ import type { IContext } from '..';
 /**
  * This is a parameter type
  * In a macrocall widget's param, see rpn example
- * 
+ *
  * ```js
  * a: {
     start: 23,

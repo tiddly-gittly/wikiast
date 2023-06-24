@@ -2,7 +2,7 @@ import type { ICustomParseTreeNode } from 'tiddlywiki';
 import type { IContext } from '..';
 
 /**
- * 
+ *
  * ```json
  * {
     "type": "list",
