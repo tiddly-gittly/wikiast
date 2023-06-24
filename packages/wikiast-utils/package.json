@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rollup --config rollup.config.ts --configPlugin swc3",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --config=jest.config.js",
-    "generate-barrels": "barrelsby --delete -l all -d ./src"
+    "generate-barrels": "barrelsby --delete -l all -d ./src && dprint fmt **/index.ts"
   },
   "repository": {
     "type": "git",
