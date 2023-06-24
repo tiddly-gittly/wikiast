@@ -1,10 +1,16 @@
-import { TText, isText, TNode } from '@udecode/plate-core';
+/* eslint-disable @typescript-eslint/consistent-type-assertions */
+import type { TNode, TText } from '@udecode/plate-core';
 import omit from 'lodash/omit';
 import type { ITextParseTreeNode } from 'tiddlywiki';
 import { IContext } from '..';
 
 /** Slate node is compact, we need to filter out some keys from wikiast */
 const textLevelKeysToOmit = ['type', 'start', 'end'];
+/**
+ * This version of @udecode/plate-core has no tree shaking, so copy it here until we upgrade it.
+ * import { isText } from '@udecode/plate-core';
+ */
+const isText = (item: unknown): item is TText => item !== null && typeof item === 'object' && 'text' in item && typeof item.text === 'string';
 
 export function text(context: IContext, text: ITextParseTreeNode): TText {
   return {
@@ -21,7 +27,7 @@ export function mergeSiblingTexts<T extends TNode>(node: T): T {
   return {
     ...node,
     children: (node.children as TNode[]).reduce<TNode[]>((accumulator, child) => {
-      const lastChild = accumulator[accumulator.length - 1];
+      const lastChild = accumulator.at(-1);
       // if two children are text nodes, merge them
       if (isText(child)) {
         if (isText(lastChild)) {

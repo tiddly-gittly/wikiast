@@ -4,9 +4,6 @@ import { type ICustomParseTreeNode, type IParseTreeNode } from 'tiddlywiki';
 import type { IContext } from '.';
 
 import { getWikiASTAdditionalProperties } from 'wikiast-utils';
-import { type IBuilders } from './slateBuilder';
-
-export type IAnyBuilder = IBuilders & Record<string, typeof slateNode>;
 
 export function convertNodes(context: IContext, nodes: IParseTreeNode[] | undefined): TNode[] {
   if (nodes === undefined || nodes.length === 0) {

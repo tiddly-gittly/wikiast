@@ -3,12 +3,14 @@
  * This is an example of custom element processing. The logic here is the same as `src/transform/wikiast-util-to-slate-plate-ast/slateBuilder/element/index.ts`, purely for example.
  */
 import type { TElement, TNode } from '@udecode/plate-core';
-import { ELEMENT_LI, ELEMENT_LIC } from '@udecode/plate-list';
 import type { IDomParseTreeNode, ITextParseTreeNode, IWikiASTNode } from 'tiddlywiki';
 import { mergeAdjacent } from 'wikiast-utils';
 import { type IContext } from '../..';
 import { convertNodes } from '../../traverse';
 
+// import { ELEMENT_LI, ELEMENT_LIC } from '@udecode/plate-list';
+const ELEMENT_LI = 'li';
+const ELEMENT_LIC = 'lic';
 export interface IListItemDomParseTreeNode extends IDomParseTreeNode {
   children: Array<IDomParseTreeNode | ITextParseTreeNode>;
   tag: 'li';
