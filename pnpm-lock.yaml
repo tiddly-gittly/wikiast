@@ -203,12 +203,16 @@ importers:
 
   packages/wikiast-util-from-wikitext: {}
 
-  packages/wikiast-util-to-slate-plate-ast: {}
+  packages/wikiast-util-to-slate-plate-ast:
+    dependencies:
+      wikiast-utils:
+        specifier: workspace:^
+        version: link:../wikiast-utils
 
   packages/wikiast-util-to-wikitext:
     dependencies:
       wikiast-utils:
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../wikiast-utils
 
   packages/wikiast-utils: {}
