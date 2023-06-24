@@ -17,6 +17,8 @@ export default [{
     dir: 'dist',
     entryFileNames: '[name].mjs',
     format: 'es',
+    preserveModules: true,
+    preserveModulesRoot: 'src',
   },
   plugins: [
     swc(defineRollupSwcOption({
