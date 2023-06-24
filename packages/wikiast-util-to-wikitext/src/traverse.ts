@@ -1,5 +1,9 @@
 import type { ICustomParseTreeNode, IParseTreeNode } from 'tiddlywiki';
-import type { IContext } from '.';
+import { IContext } from './context';
+
+export interface IWithParent {
+  parent: IParseTreeNode;
+}
 
 export function convertNodes(context: IContext, nodes: IParseTreeNode[] | undefined): string[] {
   const isRoot = context.root;
