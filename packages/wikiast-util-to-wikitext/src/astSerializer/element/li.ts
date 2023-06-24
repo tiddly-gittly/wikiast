@@ -1,5 +1,5 @@
-import type { IDomParseTreeNode } from 'tiddlywiki';
 import repeat from 'lodash/repeat';
+import type { IDomParseTreeNode } from 'tiddlywiki';
 import find from 'unist-util-find';
 import type { IContext } from '../..';
 import { convertNodes } from '../../traverse';

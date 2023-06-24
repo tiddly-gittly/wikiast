@@ -1,4 +1,3 @@
-import mapValues from 'lodash/mapValues';
 import type { IMacroCallParseTreeNode, IParseTreeAttribute, IParseTreeNode, IWikiASTNode } from 'tiddlywiki';
 import { map } from 'unist-util-map';
 
@@ -50,8 +49,9 @@ export const mapToNoPosNode = (ast: IWikiASTNode): IParseTreeNode =>
     const recordKeys = ['attributes'] as const;
     const arrayKeys = ['orderedAttributes'] as const;
     for (const key of recordKeys) {
-      if (newNode[key] !== undefined) {
-        newNode[key] = mapValues(newNode[key], (item) => removeStartEnd(item));
+      const record = newNode[key];
+      if (record !== undefined) {
+        newNode[key] = Object.fromEntries(Object.entries(record).map(([key, item]) => [key, removeStartEnd(item)]));
       }
     }
     for (const key of arrayKeys) {

@@ -1,5 +1,4 @@
 import type { IDomParseTreeNode } from 'tiddlywiki';
-import repeat from 'lodash/repeat';
 import type { IContext } from '../..';
 import { convertNodes } from '../../traverse';
 
