@@ -38,3 +38,9 @@ See [https://onetwo.ren/wiki/#AST%E8%BD%AC%E6%8D%A2%E6%88%90%E5%8F%A6%E4%B8%80%E
 ### Publish
 
 We use changeset to update version of all packages at once, follow [its guide for how to use](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md#adding-changesets)
+
+```sh
+npx changeset
+npx changeset version
+npx changeset publish
+```
