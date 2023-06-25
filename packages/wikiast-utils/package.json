@@ -7,7 +7,8 @@
   "typings": "dist/index.d.ts",
   "url": "https://github.com/tiddly-gittly/wikiast",
   "scripts": {
-    "build": "rollup --config rollup.config.ts --configPlugin swc3",
+    "build:code": "rollup --config rollup.config.ts --configPlugin swc3",
+    "build:type": "tsc --rootDir src --declarationDir dist --project ./tsconfig.json",
     "clean": "rimraf dist",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --config=jest.config.js",
     "generate-barrels": "barrelsby --delete --location all --singleQuotes --directory ./src --exclude .+\\.d\\.ts && dprint fmt **/*/index.ts",
