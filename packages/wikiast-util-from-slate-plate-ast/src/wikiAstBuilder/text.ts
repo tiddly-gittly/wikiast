@@ -1,4 +1,4 @@
-import type { TNode, TText } from '@udecode/plate-core';
+import type { TNode, TText } from '@udecode/slate';
 import type { IDomParseTreeNode, ITextParseTreeNode } from 'tiddlywiki';
 import type { IBuilders } from '../builder';
 

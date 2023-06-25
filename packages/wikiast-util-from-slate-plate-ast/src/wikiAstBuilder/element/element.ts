@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
-import type { TElement } from '@udecode/plate-core';
+import type { TElement } from '@udecode/slate';
 import type { IDomParseTreeNode, IWikiASTNode } from 'tiddlywiki';
 
 import type { IBuilders } from '../../builder';

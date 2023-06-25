@@ -1,4 +1,4 @@
-import { TNode } from '@udecode/plate-core';
+import { TNode } from '@udecode/slate';
 import type { IDomParseTreeNode } from 'tiddlywiki';
 import { IContext } from '../../context';
 import { convertNodes } from '../../traverse';

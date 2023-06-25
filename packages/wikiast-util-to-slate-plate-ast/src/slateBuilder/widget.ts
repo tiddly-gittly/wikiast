@@ -1,4 +1,4 @@
-import { type TElement } from '@udecode/plate-core';
+import { type TElement } from '@udecode/slate';
 import type { ICustomParseTreeNode } from 'tiddlywiki';
 
 import { ELEMENT_WIDGET } from 'wikiast-utils';

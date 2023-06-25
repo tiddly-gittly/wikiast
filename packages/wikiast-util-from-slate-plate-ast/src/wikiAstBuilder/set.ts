@@ -1,4 +1,4 @@
-import type { TElement } from '@udecode/plate-core';
+import type { TElement } from '@udecode/slate';
 import type { IParseTreeNode } from 'tiddlywiki';
 import { convertNodes } from '../traverse';
 

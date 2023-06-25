@@ -1,4 +1,4 @@
-import { type TNode } from '@udecode/plate-core';
+import { type TNode } from '@udecode/slate';
 import { type ICustomParseTreeNode, type IParseTreeNode } from 'tiddlywiki';
 import type { IContext } from '.';
 

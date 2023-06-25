@@ -1,4 +1,4 @@
-import type { TNode } from '@udecode/plate-core';
+import type { TNode } from '@udecode/slate';
 import type { IParseTreeNode } from 'tiddlywiki';
 import { initialContext } from './context';
 import { convertNodes } from './traverse';

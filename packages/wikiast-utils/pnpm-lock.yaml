@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@udecode/plate-core': ^19.5.0
+  '@udecode/slate': ^19.5.0
   '@udecode/plate-list': 16.4.1
   barrelsby: ^2.5.1
   esbuild: ^0.17.10
@@ -14,7 +14,7 @@ specifiers:
   unist-util-parents: ^2.0.0
 
 dependencies:
-  '@udecode/plate-core': 19.5.0_slate@0.82.0
+  '@udecode/slate': 19.5.0_slate@0.82.0
   '@udecode/plate-list': 16.4.1_slate@0.82.0
   html-tags: 3.2.0
   lodash: 4.17.21
@@ -283,7 +283,7 @@ packages:
       '@types/yargs-parser': 21.0.0
     dev: true
 
-  /@udecode/plate-core/16.3.0_slate@0.82.0:
+  /@udecode/slate/16.3.0_slate@0.82.0:
     resolution: {integrity: sha512-QkJWkaV8sMkA0fKvzezgoOMiplt2zblK6zbG9EcSUWBUjfoGcASYZzdFz330hNLtwyH7f6DFPySeRWXNF6V9lA==}
     peerDependencies:
       react: '>=16.8.0'
@@ -317,7 +317,7 @@ packages:
       - scheduler
     dev: false
 
-  /@udecode/plate-core/19.5.0_slate@0.82.0:
+  /@udecode/slate/19.5.0_slate@0.82.0:
     resolution: {integrity: sha512-qnUBF04IkiZZ0WohyJKBToQelxBpZY11gTCOXxYeS3JfBDseorm7JUJhFa//PR7IixS4UAezQH18IoC/HZ9BpQ==}
     peerDependencies:
       react: '>=16.8.0'
@@ -361,7 +361,7 @@ packages:
       slate-history: '>=0.66.0'
       slate-react: '>=0.79.0'
     dependencies:
-      '@udecode/plate-core': 16.3.0_slate@0.82.0
+      '@udecode/slate': 16.3.0_slate@0.82.0
       '@udecode/plate-reset-node': 16.3.0_slate@0.82.0
       slate: 0.82.0
     transitivePeerDependencies:
@@ -389,7 +389,7 @@ packages:
       slate-history: '>=0.66.0'
       slate-react: '>=0.79.0'
     dependencies:
-      '@udecode/plate-core': 16.3.0_slate@0.82.0
+      '@udecode/slate': 16.3.0_slate@0.82.0
       slate: 0.82.0
     transitivePeerDependencies:
       - '@babel/core'

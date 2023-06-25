@@ -1,4 +1,4 @@
-import { type TEditor, type TElement, type TText, type Value } from '@udecode/plate-core';
+import { type TEditor, type TElement, type TText, type Value } from '@udecode/slate';
 
 import { codeblock } from './codeblock';
 import { heading } from './heading';

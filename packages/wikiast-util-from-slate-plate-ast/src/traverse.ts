@@ -1,4 +1,4 @@
-import type { TNode } from '@udecode/plate-core';
+import type { TNode } from '@udecode/slate';
 import type { IParseTreeNode } from 'tiddlywiki';
 
 import { getSlatePlateASTAdditionalProperties, isElement, isText } from 'wikiast-utils';

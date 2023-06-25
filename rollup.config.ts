@@ -28,14 +28,4 @@ export default [{
     commonjs(),
     nodeResolve({ preferBuiltins: true }),
   ],
-}, {
-  input: 'src/index.ts',
-  output: {
-    dir: 'dist',
-    format: 'es',
-  },
-  plugins: [
-    json(),
-    dts(),
-  ],
 }];

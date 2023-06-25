@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
-import { TEditor, Value, TElement, TText } from '@udecode/plate-core';
+import { TEditor, Value, TElement, TText } from '@udecode/slate';
 
 export const link: Record<string, TEditor<Value> | TElement | TText | Array<TEditor<Value> | TElement | TText>> = {
   link: [

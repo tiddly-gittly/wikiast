@@ -32,3 +32,9 @@ Similar to SlateJS AST, each wiki system will generate different AST. In our pac
 It contains `one` and `all` functions (may have different name, but concept are the same) similar to [syntax-tree/mdast-util-to-hast](https://github.com/syntax-tree/mdast-util-to-hast/blob/dfd724a5e62fc270e71bc2d5a2e4471be0c5ef5b/lib/traverse.js#L38-L108).
 
 See [https://onetwo.ren/wiki/#AST%E8%BD%AC%E6%8D%A2%E6%88%90%E5%8F%A6%E4%B8%80%E7%A7%8DAST](https://onetwo.ren/wiki/#AST%E8%BD%AC%E6%8D%A2%E6%88%90%E5%8F%A6%E4%B8%80%E7%A7%8DAST) (in Chinese) for explanation of this compiler design pattern.
+
+## Development
+
+### Publish
+
+We use changeset to update version of all packages at once, follow [its guide for how to use](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md#adding-changesets)

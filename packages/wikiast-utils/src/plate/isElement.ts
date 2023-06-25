@@ -1,8 +1,8 @@
-import type { TElement } from '@udecode/plate-core';
+import type { TElement } from '@udecode/slate';
 
 /**
- * This version of @udecode/plate-core has no tree shaking, so copy it here until we upgrade it.
- * import { isElement } from '@udecode/plate-core';
+ * This version of @udecode/slate has no tree shaking, so copy it here until we upgrade it.
+ * import { isElement } from '@udecode/slate';
  *
  * ```js
  * u = isPlainObject

@@ -1,4 +1,4 @@
-import type { TNode, TText } from '@udecode/plate-core';
+import type { TNode, TText } from '@udecode/slate';
 import type { ITextParseTreeNode } from 'tiddlywiki';
 import { isText, omit } from 'wikiast-utils';
 import { IContext } from '..';

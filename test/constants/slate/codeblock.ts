@@ -1,4 +1,4 @@
-import { TEditor, TElement, TText, Value } from '@udecode/plate-core';
+import { TEditor, TElement, TText, Value } from '@udecode/slate';
 
 export const codeblock: Record<string, TEditor<Value> | TElement | TText | Array<TEditor<Value> | TElement | TText>> = {
   codeblock: [
