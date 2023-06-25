@@ -9,7 +9,8 @@
     "build": "rollup --config rollup.config.ts --configPlugin swc3",
     "clean": "rimraf dist",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest -c ./jest.config.ts",
-    "generate-barrels": "barrelsby --delete --location all --singleQuotes --directory ./src --exclude .+\\.d\\.ts && dprint fmt **/*/index.ts"
+    "generate-barrels": "barrelsby --delete --location all --singleQuotes --directory ./src --exclude .+\\.d\\.ts && dprint fmt **/*/index.ts",
+    "prepublish": "pnpm build"
   },
   "repository": {
     "type": "git",
