@@ -2,7 +2,7 @@
   "description": "Wikiast packages shared utils functions",
   "license": "MIT",
   "name": "wikiast-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "dist/index.mjs",
   "typings": "dist/index.d.ts",
   "url": "https://github.com/tiddly-gittly/wikiast",
@@ -37,10 +37,8 @@
     "url": "https://github.com/tiddly-gittly/wikiast/issues"
   },
   "homepage": "https://github.com/tiddly-gittly/wikiast#readme",
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public",

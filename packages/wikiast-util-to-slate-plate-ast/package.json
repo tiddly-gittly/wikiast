@@ -2,7 +2,7 @@
   "description": "Get SlateJS AST from Wiki AST",
   "license": "MIT",
   "name": "wikiast-util-to-slate-plate-ast",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "dist/index.mjs",
   "typings": "dist/index.d.ts",
   "url": "https://github.com/tiddly-gittly/wikiast",
@@ -40,8 +40,7 @@
   "dependencies": {
     "wikiast-utils": "workspace:^"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public",

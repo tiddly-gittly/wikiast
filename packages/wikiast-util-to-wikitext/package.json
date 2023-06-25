@@ -1,6 +1,6 @@
 {
   "name": "wikiast-util-to-wikitext",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Tiddlywiki wikiast serializer",
   "type": "module",
   "main": "dist/index.mjs",
@@ -35,8 +35,7 @@
   "dependencies": {
     "wikiast-utils": "workspace:^"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public",
