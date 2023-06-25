@@ -12,7 +12,7 @@
     "clean": "rimraf dist",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --config=jest.config.js",
     "generate-barrels": "barrelsby --delete --location all --singleQuotes --directory ./src --exclude .+\\.d\\.ts && dprint fmt **/*/index.ts",
-    "prepublish": "pnpm build"
+    "prepublish": "pnpm generate-barrels && pnpm build:code && pnpm build:type"
   },
   "repository": {
     "type": "git",
