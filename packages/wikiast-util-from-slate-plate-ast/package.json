@@ -2,7 +2,7 @@
   "description": "Get Wiki AST from SlateJS AST",
   "license": "MIT",
   "name": "wikiast-util-from-slate-plate-ast",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "url": "https://github.com/tiddly-gittly/wikiast",
   "main": "dist/index.mjs",
   "typings": "dist/index.d.ts",

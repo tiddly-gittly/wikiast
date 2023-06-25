@@ -1,6 +1,6 @@
 {
   "name": "wikiast-util-from-wikitext",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Get Tiddlywiki wikiast from wikitext, by simply calling `$tw.wiki.parseText`",
   "type": "module",
   "main": "dist/index.mjs",

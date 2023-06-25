@@ -1,6 +1,6 @@
 {
   "name": "wikiast-util-to-wikitext",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Tiddlywiki wikiast serializer",
   "type": "module",
   "main": "dist/index.mjs",
