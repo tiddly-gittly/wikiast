@@ -2,12 +2,14 @@
 import { IParseTreeNode } from 'tiddlywiki';
 
 export const transclude: Record<string, IParseTreeNode[] | IParseTreeNode> = {
+  // `attributes` is the source tiddler
+  // `children` is the transclude template part, same as the source tiddler if no template is used
   transclude: [
     {
-      // the source tiddler
       type: 'tiddler',
       attributes: {
         tiddler: {
+          name: 'tiddler',
           type: 'string',
           value: 'favicon.ico',
         },
@@ -15,10 +17,10 @@ export const transclude: Record<string, IParseTreeNode[] | IParseTreeNode> = {
       isBlock: true,
       children: [
         {
-          // the transclude template part, same as the source tiddler if no template is used
           type: 'transclude',
           attributes: {
-            tiddler: {
+            $tiddler: {
+              name: '$tiddler',
               type: 'string',
               value: 'favicon.ico',
             },

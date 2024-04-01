@@ -10,6 +10,7 @@ export function macrocall(context: IContext, node: IMacroCallParseTreeNode): str
     return context.builders.widget(context, node as ICustomParseTreeNode);
   }
   if (name === undefined) return [];
+  // << xxx >> style is not with type `transclude` after 5.3.0
   const parameterString = params
     ?.flatMap((parameter) => {
       const parameterKeyString = parameter.name ? `${parameter.name}:` : '';

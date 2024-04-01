@@ -2,34 +2,23 @@
 import { IParseTreeNode } from 'tiddlywiki';
 
 export const macro: Record<string, IParseTreeNode[] | IParseTreeNode> = {
-  'macro alert': [
-    {
-      type: 'macrocall',
-      start: 0,
-      params: [
-        {
-          type: 'macro-parameter',
-          start: 7,
-          value: 'primary',
-          end: 15,
-        },
-        {
-          type: 'macro-parameter',
-          start: 15,
-          value: 'primary alert',
-          end: 31,
-        },
-        {
-          type: 'macro-parameter',
-          start: 31,
-          value: '60%',
-          name: 'width',
-          end: 41,
-        },
-      ],
-      name: 'alert',
-      end: 43,
-      isBlock: true,
+  'macro alert': [{
+    type: 'transclude',
+    start: 0,
+    end: 43,
+    attributes: {
+      '0': { name: '0', type: 'string', value: 'primary', start: 7, end: 15 },
+      '1': { name: '1', type: 'string', value: 'primary alert', start: 15, end: 31 },
+      $variable: { name: '$variable', type: 'string', value: 'alert' },
+      width: { name: 'width', type: 'string', value: '60%', start: 31, end: 41 },
     },
-  ],
+    orderedAttributes: [{ name: '$variable', type: 'string', value: 'alert' }, { name: '0', type: 'string', value: 'primary', start: 7, end: 15 }, {
+      name: '1',
+      type: 'string',
+      value: 'primary alert',
+      start: 15,
+      end: 31,
+    }, { name: 'width', type: 'string', value: '60%', start: 31, end: 41 }],
+    isBlock: true,
+  }],
 };
