@@ -5,6 +5,7 @@ logs/
 template/
 .webpack/
 node_modules/
+!node_modules/tiddlywiki/
 localization/
 build-resources/
 .vscode/

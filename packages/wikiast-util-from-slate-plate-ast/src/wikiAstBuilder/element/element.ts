@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 import type { TElement } from '@udecode/slate';
-import type { IDomParseTreeNode, IWikiASTNode } from 'tiddlywiki';
+import type { ParseTreeHtmlNode, WikiASTNode } from 'tiddlywiki/types/ast';
 
 import type { IBuilders } from '../../builder';
 import { convertNodes } from '../../traverse';
@@ -9,14 +9,14 @@ import { a } from './a';
 import { blockquote } from './blockquote';
 import { table, td } from './table';
 
-const elementBuilders: Partial<Record<keyof HTMLElementTagNameMap, (builders: IBuilders, node: TElement) => IWikiASTNode>> = {
+const elementBuilders: Partial<Record<keyof HTMLElementTagNameMap, (builders: IBuilders, node: TElement) => WikiASTNode>> = {
   blockquote,
   a,
   table,
   td,
 };
 
-export function element(builders: IBuilders, node: TElement & { type: keyof HTMLElementTagNameMap }): IWikiASTNode {
+export function element(builders: IBuilders, node: TElement & { type: keyof HTMLElementTagNameMap }): WikiASTNode {
   const { type: tag, children } = node;
   const customElementHandler = elementBuilders[tag];
   if (typeof customElementHandler === 'function') {
@@ -26,5 +26,5 @@ export function element(builders: IBuilders, node: TElement & { type: keyof HTML
     type: 'element',
     tag,
     children: convertNodes(builders, children),
-  } as IDomParseTreeNode;
+  } satisfies ParseTreeHtmlNode;
 }

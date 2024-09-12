@@ -4,6 +4,8 @@
     "noEmit": true
   },
   "include": [
+    "node_modules/tiddlywiki/**/*.js",
+    "node_modules/tiddlywiki/**/*.ts",
     "packages/**/*.ts",
     "test/**/*.ts",
     "packages/**/*.js",
