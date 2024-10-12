@@ -4,6 +4,6 @@
 
 export * from './builder';
 export * from './context';
+export * from './slateBuilder/index';
 export * from './traverse';
 export * from './wikiAstToSlateAst';
-export * from './slateBuilder/index';

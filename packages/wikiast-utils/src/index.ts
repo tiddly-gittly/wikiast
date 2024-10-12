@@ -4,10 +4,10 @@
 
 export * from './dropExtraTailingN';
 export * from './getNodeAdditionalProperties';
+export * from './lodash/index';
 export * from './mapAttributes';
 export * from './mapToNoPosNode';
 export * from './mergeAdjacent';
 export * from './metadata';
-export * from './wikiastTypeNames';
-export * from './lodash/index';
 export * from './plate/index';
+export * from './wikiastTypeNames';

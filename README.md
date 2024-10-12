@@ -53,6 +53,10 @@ See [https://onetwo.ren/wiki/#AST转换成另一种AST](https://onetwo.ren/wiki/
 
 ## Development
 
+### `Unable to resolve path to module 'wikiast-utils'.`
+
+Run `npm run build` can solve this, because wikiast-utils's `dist` needs to be build before import by other workspace members.
+
 ### Publish
 
 We use changeset to update version of all packages at once, follow [its guide for how to use](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md#adding-changesets)

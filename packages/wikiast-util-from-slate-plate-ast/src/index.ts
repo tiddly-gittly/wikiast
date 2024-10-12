@@ -4,5 +4,5 @@
 
 export * from './builder';
 export * from './traverse';
-export * from './wikiAstFromSlateAst';
 export * from './wikiAstBuilder/index';
+export * from './wikiAstFromSlateAst';
