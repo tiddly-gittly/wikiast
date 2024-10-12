@@ -94,6 +94,9 @@ aaa`,
 [ext[Open file|../README.md]]
 
 <a href="##Top_of_tiddler">Top</a>`,
+  'bare external link': `https://tiddlywiki.com
+
+file://../README.md`,
   heading: `! AAA
 
 !! AAA

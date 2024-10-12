@@ -9,12 +9,19 @@ export const codeblock: Record<string, IParseTreeNode[] | IParseTreeNode> = {
         code: {
           type: 'string',
           value: '<$list filter="[tag[ExampleTag]sort[title]]"/>',
+          start: 7,
+          end: 57,
         },
         language: {
           type: 'string',
           value: 'tid',
+          start: 3,
+          end: 6,
         },
       },
+      start: 0,
+      end: 57,
+      rule: 'codeblock',
     },
   ],
 };

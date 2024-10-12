@@ -10,6 +10,8 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
         class: {
           type: 'string',
           value: '',
+          start: 1,
+          end: 1,
         },
       },
       children: [
@@ -20,6 +22,9 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
           end: 5,
         },
       ],
+      start: 0,
+      end: 5,
+      rule: 'heading',
     },
     {
       type: 'element',
@@ -28,6 +33,8 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
         class: {
           type: 'string',
           value: '',
+          start: 9,
+          end: 9,
         },
       },
       children: [
@@ -38,6 +45,9 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
           end: 13,
         },
       ],
+      start: 7,
+      end: 13,
+      rule: 'heading',
     },
     {
       type: 'element',
@@ -46,6 +56,8 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
         class: {
           type: 'string',
           value: '',
+          start: 18,
+          end: 18,
         },
       },
       children: [
@@ -56,6 +68,9 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
           end: 22,
         },
       ],
+      start: 15,
+      end: 22,
+      rule: 'heading',
     },
     {
       type: 'element',
@@ -64,6 +79,8 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
         class: {
           type: 'string',
           value: '',
+          start: 28,
+          end: 28,
         },
       },
       children: [
@@ -74,6 +91,9 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
           end: 32,
         },
       ],
+      start: 24,
+      end: 32,
+      rule: 'heading',
     },
     {
       type: 'element',
@@ -82,6 +102,8 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
         class: {
           type: 'string',
           value: '',
+          start: 39,
+          end: 39,
         },
       },
       children: [
@@ -92,6 +114,9 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
           end: 43,
         },
       ],
+      start: 34,
+      end: 43,
+      rule: 'heading',
     },
     {
       type: 'element',
@@ -100,6 +125,8 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
         class: {
           type: 'string',
           value: '',
+          start: 51,
+          end: 51,
         },
       },
       children: [
@@ -110,6 +137,9 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
           end: 55,
         },
       ],
+      start: 45,
+      end: 55,
+      rule: 'heading',
     },
     {
       type: 'element',
@@ -124,6 +154,7 @@ export const heading: Record<string, IParseTreeNode[] | IParseTreeNode> = {
       ],
       start: 57,
       end: 60,
+      rule: 'parseblock',
     },
   ],
 };

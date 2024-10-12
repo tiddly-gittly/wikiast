@@ -28,6 +28,9 @@ export const transclude: Record<string, IParseTreeNode[] | IParseTreeNode> = {
           isBlock: true,
         },
       ],
+      start: 0,
+      end: 15,
+      rule: 'transcludeblock',
     },
   ],
 };
