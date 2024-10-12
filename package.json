@@ -16,6 +16,7 @@
     "@udecode/slate": "^38.0.4",
     "html-tags": "4.0.0",
     "lodash": "4.17.21",
+    "tiddlywiki": "^5.3.5",
     "unist-util-find": "^3.0.0",
     "unist-util-map": "4.0.0",
     "unist-util-parents": "^3.0.0",
