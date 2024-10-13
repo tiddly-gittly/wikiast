@@ -21,14 +21,14 @@ export const set: Record<string, IParseTreeNode[] | IParseTreeNode> = {
         {
           type: 'transclude',
           start: 55,
-          end: 77,
+          end: 79,
           attributes: {
             '0': {
               name: '0',
               type: 'string',
               value: 'Title/Prompt',
               start: 62,
-              end: 75,
+              end: 77,
             },
             $variable: {
               name: '$variable',
@@ -47,7 +47,7 @@ export const set: Record<string, IParseTreeNode[] | IParseTreeNode> = {
               type: 'string',
               value: 'Title/Prompt',
               start: 62,
-              end: 75,
+              end: 77,
             },
           ],
           isBlock: true,
@@ -56,6 +56,7 @@ export const set: Record<string, IParseTreeNode[] | IParseTreeNode> = {
       ],
       params: [],
       isMacroDefinition: true,
+      inline: true,
       orderedAttributes: [
         {
           name: 'name',

@@ -1018,6 +1018,7 @@ export const table: Record<string, IParseTreeNode[] | IParseTreeNode> = {
       ],
       params: [],
       isMacroDefinition: true,
+      inline: true,
       orderedAttributes: [
         {
           name: 'name',
