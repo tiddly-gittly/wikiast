@@ -1,4 +1,4 @@
-import { codeblock, element, link, macro, set, text, widget } from './slateBuilder';
+import { codeblock, element, link, set, text, transclude, widget } from './slateBuilder';
 import type { slateNode } from './traverse';
 
 export const builders = {
@@ -12,7 +12,7 @@ export const builders = {
   widget,
   image: widget,
   tiddler: widget,
-  macrocall: macro,
+  transclude,
   set,
 };
 export type IBuilders = typeof builders;

@@ -7,4 +7,5 @@ export * from './element/index';
 export * from './lic';
 export * from './set';
 export * from './text';
+export * from './transclude';
 export * from './widget';

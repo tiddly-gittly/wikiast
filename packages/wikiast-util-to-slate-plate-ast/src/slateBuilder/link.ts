@@ -1,10 +1,10 @@
 import { type TElement } from '@udecode/slate';
-import type { ILinkParseTreeNode, ITextParseTreeNode } from 'tiddlywiki';
+import type { IDomParseTreeNode, ITextParseTreeNode } from 'tiddlywiki';
 
 import { type ISlateAstExtraTwMarkers } from 'wikiast-utils';
 import { type IContext } from '..';
 
-export function link(context: IContext, node: ILinkParseTreeNode): TElement & ISlateAstExtraTwMarkers {
+export function link(context: IContext, node: IDomParseTreeNode): TElement & ISlateAstExtraTwMarkers {
   // we always have these attributes and child, even in empty link `[[]]`
   const {
     to: { value: to },
@@ -13,7 +13,7 @@ export function link(context: IContext, node: ILinkParseTreeNode): TElement & IS
 
   return {
     type: 'a',
-    'tw-type': 'link',
+    rule: 'link',
     url: to,
     children: [{ text }],
   };

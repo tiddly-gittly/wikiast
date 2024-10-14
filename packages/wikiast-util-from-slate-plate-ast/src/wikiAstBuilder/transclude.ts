@@ -4,6 +4,6 @@ import type { IParseTreeNode } from 'tiddlywiki';
 import { ISlateAstExtraTwMarkers } from 'wikiast-utils';
 import type { IBuilders } from '../builder';
 
-export function widget(builders: IBuilders, node: TElement & ISlateAstExtraTwMarkers): IParseTreeNode | undefined {
+export function transclude(builders: IBuilders, node: TElement & ISlateAstExtraTwMarkers): IParseTreeNode | undefined {
   return node.node;
 }
