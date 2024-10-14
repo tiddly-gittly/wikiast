@@ -31,7 +31,7 @@
     "@rollup/plugin-typescript": "^12.1.0",
     "@swc/core": "^1.7.35",
     "@swc/helpers": "^0.5.13",
-    "@tiddlygit/tiddlywiki-pr-nightly": "5.3.6-prerelease-20241011-pr-8258-5",
+    "@tiddlygit/tiddlywiki-pr-nightly": "5.3.6-prerelease-20241011-pr-8258-6",
     "@types/jest": "^29.5.13",
     "@types/lodash": "4.17.10",
     "@types/node": "^22.7.5",

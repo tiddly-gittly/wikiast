@@ -56,7 +56,7 @@ export const set: Record<string, IParseTreeNode[] | IParseTreeNode> = {
       ],
       params: [],
       isMacroDefinition: true,
-      inline: true,
+      isBlock: true,
       orderedAttributes: [
         {
           name: 'name',

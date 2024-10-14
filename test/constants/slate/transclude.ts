@@ -15,7 +15,7 @@ export const transclude: Record<string, TEditor<Value> | TElement | TText | Arra
         {
           type: 'transclude',
           attributes: {
-            tiddler: {
+            $tiddler: {
               type: 'string',
               value: 'favicon.ico',
             },
