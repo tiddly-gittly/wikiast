@@ -43,6 +43,7 @@ export function wrapTextWithP(nodes: TNode[]): TNode[] {
     if (typeof node.text === 'string' && node.type === undefined) {
       return {
         type: 'p',
+        rule: 'parseblock',
         children: [node],
       } as TNode;
     }

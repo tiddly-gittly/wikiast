@@ -11,6 +11,7 @@ export function transclude(context: IContext, node: ICustomParseTreeNode): TElem
   /** it may be `<$macrocall` widget */
   return {
     node,
+    rule: node.rule,
     type: ELEMENT_TRANSCLUDE,
     isElement: true,
     isVoid: true,

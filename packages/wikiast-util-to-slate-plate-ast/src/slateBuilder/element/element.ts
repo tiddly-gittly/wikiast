@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import { TNode } from '@udecode/slate';
 import type { IDomParseTreeNode } from 'tiddlywiki';
 import { IContext } from '../../context';
@@ -18,8 +19,12 @@ export function element(context: IContext, node: IDomParseTreeNode): TNode | TNo
   if (typeof elementBuilders[tag as keyof IElementBuilders] === 'function') {
     return elementBuilders[tag as keyof IElementBuilders](context, node);
   }
-  return {
+  const result = {
     type: tag,
     children: convertNodes(context, children),
   } as TNode;
+  if (node.rule) {
+    result.rule = node.rule;
+  }
+  return result;
 }

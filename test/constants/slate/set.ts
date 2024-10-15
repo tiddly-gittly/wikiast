@@ -15,6 +15,7 @@ export const set: Record<string, TEditor<Value> | TElement | TText | Array<TEdit
           value: '$:/language/ControlPanel/Basics/',
         },
       ],
+      isBlock: true,
       attributes: {
         name: 'lingo-base',
         value: '$:/language/ControlPanel/Basics/',
@@ -47,6 +48,7 @@ export const set: Record<string, TEditor<Value> | TElement | TText | Array<TEdit
         },
         params: [],
         isMacroDefinition: true,
+        isBlock: true,
         orderedAttributes: [
           {
             name: 'name',
@@ -59,11 +61,94 @@ export const set: Record<string, TEditor<Value> | TElement | TText | Array<TEdit
             value: '$:/language/ControlPanel/Basics/',
           },
         ],
+        start: 0,
+        end: 53,
+        rule: 'macrodef',
       },
       type: 'set',
       isElement: true,
       isVoid: true,
-      children: [],
+      children: [
+        {
+          orderedAttributes: [
+            {
+              name: '$variable',
+              type: 'string',
+              value: 'lingo',
+            },
+            {
+              name: '0',
+              type: 'string',
+              value: 'Title/Prompt',
+              start: 62,
+              end: 77,
+            },
+          ],
+          isBlock: true,
+          attributes: {
+            '0': 'Title/Prompt',
+            $variable: 'lingo',
+          },
+          'tw-attributes': {
+            '0': {
+              name: '0',
+              type: 'string',
+              value: 'Title/Prompt',
+              start: 62,
+              end: 77,
+            },
+            $variable: {
+              name: '$variable',
+              type: 'string',
+              value: 'lingo',
+            },
+          },
+          node: {
+            type: 'transclude',
+            start: 55,
+            end: 79,
+            attributes: {
+              '0': {
+                name: '0',
+                type: 'string',
+                value: 'Title/Prompt',
+                start: 62,
+                end: 77,
+              },
+              $variable: {
+                name: '$variable',
+                type: 'string',
+                value: 'lingo',
+              },
+            },
+            orderedAttributes: [
+              {
+                name: '$variable',
+                type: 'string',
+                value: 'lingo',
+              },
+              {
+                name: '0',
+                type: 'string',
+                value: 'Title/Prompt',
+                start: 62,
+                end: 77,
+              },
+            ],
+            isBlock: true,
+            rule: 'macrocallblock',
+          },
+          rule: 'macrocallblock',
+          type: 'transclude',
+          isElement: true,
+          isVoid: true,
+          children: [
+            {
+              text: '',
+            },
+          ],
+        },
+      ],
     },
   ],
 };

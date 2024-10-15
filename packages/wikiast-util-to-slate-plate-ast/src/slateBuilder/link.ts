@@ -13,7 +13,7 @@ export function link(context: IContext, node: IDomParseTreeNode): TElement & ISl
 
   return {
     type: 'a',
-    rule: 'link',
+    rule: node.rule,
     url: to,
     children: [{ text }],
   };

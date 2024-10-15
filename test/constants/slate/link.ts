@@ -8,7 +8,7 @@ export const link: Record<string, TEditor<Value> | TElement | TText | Array<TEdi
       children: [
         {
           type: 'a',
-          rule: 'link',
+          rule: 'prettylink',
           'tw-attributes': { to: { type: 'string', value: 'ExampleTag' } },
           url: 'ExampleTag',
           children: [{ text: 'ExampleTag' }],
@@ -17,13 +17,13 @@ export const link: Record<string, TEditor<Value> | TElement | TText | Array<TEdi
     },
   ],
   'empty link': [
-    { type: 'p', children: [{ type: 'a', rule: 'link', 'tw-attributes': { to: { type: 'string', value: '' } }, url: '', children: [{ text: '' }] }] },
+    { type: 'p', children: [{ type: 'a', rule: 'prettylink', 'tw-attributes': { to: { type: 'string', value: '' } }, url: '', children: [{ text: '' }] }] },
   ],
   'alias link': [
     {
       type: 'p',
       children: [
-        { type: 'a', rule: 'link', 'tw-attributes': { to: { type: 'string', value: 'ExampleTag' } }, url: 'ExampleTag', children: [{ text: 'SomeText' }] },
+        { type: 'a', rule: 'prettylink', 'tw-attributes': { to: { type: 'string', value: 'ExampleTag' } }, url: 'ExampleTag', children: [{ text: 'SomeText' }] },
       ],
     },
   ],
@@ -142,7 +142,7 @@ export const link: Record<string, TEditor<Value> | TElement | TText | Array<TEdi
                               text: 'BBB',
                             },
                           ],
-                          rule: 'link',
+                          rule: 'prettylink',
                         },
                         {
                           text: '',

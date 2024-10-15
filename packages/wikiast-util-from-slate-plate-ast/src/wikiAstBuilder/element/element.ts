@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 import type { TElement } from '@udecode/slate';
 import type { IDomParseTreeNode, IWikiASTNode } from 'tiddlywiki';
+import { type ISlateAstExtraTwMarkers } from 'wikiast-utils';
 
 import type { IBuilders } from '../../builder';
 import { convertNodes } from '../../traverse';
@@ -16,7 +17,7 @@ const elementBuilders: Partial<Record<keyof HTMLElementTagNameMap, (builders: IB
   td,
 };
 
-export function element(builders: IBuilders, node: TElement & { type: keyof HTMLElementTagNameMap }): IWikiASTNode {
+export function element(builders: IBuilders, node: TElement & ISlateAstExtraTwMarkers & { type: keyof HTMLElementTagNameMap }): IWikiASTNode {
   const { type: tag, children } = node;
   const customElementHandler = elementBuilders[tag];
   if (typeof customElementHandler === 'function') {
@@ -24,6 +25,7 @@ export function element(builders: IBuilders, node: TElement & { type: keyof HTML
   }
   return {
     type: 'element',
+    rule: node.rule,
     tag,
     children: convertNodes(builders, children),
   } as IDomParseTreeNode;

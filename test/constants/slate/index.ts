@@ -28,5 +28,5 @@ export const slateDict: Record<string, TEditor<Value> | TElement | TText | Array
   ...table,
   ...set,
   text: [{ text: 'AAA' }],
-  'p > text': { type: 'p', children: [{ text: 'AAA' }] },
+  'p > text': { type: 'p', rule: 'parseblock', children: [{ text: 'AAA' }] },
 };
