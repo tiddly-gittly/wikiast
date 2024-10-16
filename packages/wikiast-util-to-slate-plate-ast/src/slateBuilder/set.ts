@@ -19,6 +19,7 @@ export function set(context: IContext, node: ICustomParseTreeNode): TElement & {
   if ('tag' in node) {
     return {
       ...context.builders.widget(context, nodeWithoutChildren),
+      node: nodeWithoutChildren,
       children: convertNodes(context, children) as TElement[],
     };
   }

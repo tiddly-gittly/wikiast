@@ -1,33 +1,2005 @@
-[
-  {
-    "attributes": {
-      "code": "<$list filter=\"[tag[ExampleTag]sort[title]]\"/>",
-      "language": "tid"
+{
+  "p > text": [
+    {
+      "type": "p",
+      "children": [
+        {
+          "text": "AAA"
+        }
+      ],
+      "rule": "parseblock"
+    }
+  ],
+  "ul > li > text": [
+    {
+      "type": "ul",
+      "children": [
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "AAA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "BBB"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "CCC"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ol > li > text": [
+    {
+      "type": "ol",
+      "children": [
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "AAA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "BBB"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "CCC"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ol > ol > ol > li": [
+    {
+      "type": "ol",
+      "children": [
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "AAA"
+                }
+              ]
+            },
+            {
+              "type": "ol",
+              "children": [
+                {
+                  "type": "li",
+                  "children": [
+                    {
+                      "type": "lic",
+                      "children": [
+                        {
+                          "text": "BBB"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ol",
+                      "children": [
+                        {
+                          "type": "li",
+                          "children": [
+                            {
+                              "type": "lic",
+                              "children": [
+                                {
+                                  "text": "CCC"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "p + ol + blockquote > div + ol": [
+    {
+      "type": "p",
+      "children": [
+        {
+          "text": "PPP"
+        }
+      ],
+      "rule": "parseblock"
     },
-    "tw-attributes": {
-      "code": {
-        "type": "string",
-        "value": "<$list filter=\"[tag[ExampleTag]sort[title]]\"/>",
-        "start": 7,
-        "end": 57
+    {
+      "type": "ol",
+      "children": [
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "AAA"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "blockquote",
+      "children": [
+        {
+          "text": "BBB\nBBB2"
+        }
+      ]
+    },
+    {
+      "type": "ol",
+      "children": [
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "CCC"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "p basic sequence marks": [
+    {
+      "type": "p",
+      "children": [
+        {
+          "text": "A"
+        },
+        {
+          "text": "A",
+          "bold": true
+        },
+        {
+          "text": "A",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "A",
+          "bold": true
+        },
+        {
+          "text": "A"
+        }
+      ],
+      "rule": "parseblock"
+    },
+    {
+      "type": "p",
+      "children": [
+        {
+          "text": "B"
+        },
+        {
+          "text": "B",
+          "italic": true
+        },
+        {
+          "text": "B",
+          "italic": true,
+          "underline": true
+        },
+        {
+          "text": "B",
+          "italic": true
+        },
+        {
+          "text": "B"
+        }
+      ],
+      "rule": "parseblock"
+    },
+    {
+      "type": "p",
+      "children": [
+        {
+          "text": "C"
+        },
+        {
+          "text": "C",
+          "underline": true
+        },
+        {
+          "text": "C",
+          "underline": true,
+          "strikethrough": true
+        },
+        {
+          "text": "C",
+          "underline": true
+        },
+        {
+          "text": "C"
+        }
+      ],
+      "rule": "parseblock"
+    },
+    {
+      "type": "p",
+      "children": [
+        {
+          "text": "D"
+        },
+        {
+          "text": "D",
+          "strikethrough": true
+        },
+        {
+          "text": "D",
+          "strikethrough": true,
+          "code": true
+        },
+        {
+          "text": "D",
+          "strikethrough": true
+        },
+        {
+          "text": "D"
+        }
+      ],
+      "rule": "parseblock"
+    },
+    {
+      "type": "p",
+      "children": [
+        {
+          "text": "E"
+        },
+        {
+          "text": "EEE",
+          "code": true
+        },
+        {
+          "text": "E"
+        }
+      ],
+      "rule": "parseblock"
+    },
+    {
+      "type": "p",
+      "children": [
+        {
+          "text": "F"
+        },
+        {
+          "text": "F",
+          "superscript": true
+        },
+        {
+          "text": "F",
+          "subscript": true
+        },
+        {
+          "text": "F",
+          "superscript": true
+        },
+        {
+          "text": "F"
+        }
+      ],
+      "rule": "parseblock"
+    },
+    {
+      "type": "p",
+      "children": [
+        {
+          "text": "G"
+        },
+        {
+          "text": "G",
+          "subscript": true
+        },
+        {
+          "text": "G",
+          "bold": true,
+          "subscript": true
+        },
+        {
+          "text": "G",
+          "subscript": true
+        },
+        {
+          "text": "G"
+        }
+      ],
+      "rule": "parseblock"
+    }
+  ],
+  "ol > li > mark > text": [
+    {
+      "type": "ol",
+      "children": [
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "A"
+                },
+                {
+                  "text": "A",
+                  "bold": true,
+                  "italic": true
+                },
+                {
+                  "text": "A"
+                }
+              ]
+            },
+            {
+              "type": "ol",
+              "children": [
+                {
+                  "type": "li",
+                  "children": [
+                    {
+                      "type": "lic",
+                      "children": [
+                        {
+                          "text": "B"
+                        },
+                        {
+                          "text": "B",
+                          "italic": true
+                        },
+                        {
+                          "text": "B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ol",
+                      "children": [
+                        {
+                          "type": "li",
+                          "children": [
+                            {
+                              "type": "lic",
+                              "children": [
+                                {
+                                  "text": "C"
+                                },
+                                {
+                                  "text": "C",
+                                  "superscript": true
+                                },
+                                {
+                                  "text": "C"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ol > ol > p + empty p": [
+    {
+      "type": "ol",
+      "children": [
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "逐字输入"
+                }
+              ]
+            },
+            {
+              "type": "ol",
+              "children": [
+                {
+                  "type": "li",
+                  "children": [
+                    {
+                      "type": "lic",
+                      "children": [
+                        {
+                          "text": "先通过 "
+                        },
+                        {
+                          "text": "/",
+                          "code": true
+                        },
+                        {
+                          "text": " 菜单将当前块转换为特殊块，其实就是告诉编辑器进入实时预览模式"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "li",
+                  "children": [
+                    {
+                      "type": "lic",
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ol + ol > ol > p": [
+    {
+      "type": "ol",
+      "children": [
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "AAA"
+                }
+              ]
+            },
+            {
+              "type": "ol",
+              "children": [
+                {
+                  "type": "li",
+                  "children": [
+                    {
+                      "type": "lic",
+                      "children": [
+                        {
+                          "text": "CCC"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "li",
+                  "children": [
+                    {
+                      "type": "lic",
+                      "children": [
+                        {
+                          "text": "DDD"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "li",
+                  "children": [
+                    {
+                      "type": "lic",
+                      "children": [
+                        {
+                          "text": "EEE"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "BBB"
+                }
+              ]
+            },
+            {
+              "type": "ol",
+              "children": [
+                {
+                  "type": "li",
+                  "children": [
+                    {
+                      "type": "lic",
+                      "children": [
+                        {
+                          "text": "FF "
+                        },
+                        {
+                          "text": "/",
+                          "code": true
+                        },
+                        {
+                          "text": " FFF"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "li",
+                  "children": [
+                    {
+                      "type": "lic",
+                      "children": [
+                        {
+                          "text": "FFF"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "li",
+                  "children": [
+                    {
+                      "type": "lic",
+                      "children": [
+                        {
+                          "text": "GGG"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "li",
+                  "children": [
+                    {
+                      "type": "lic",
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "image": [
+    {
+      "type": "p",
+      "children": [
+        {
+          "node": {
+            "type": "image",
+            "attributes": {
+              "source": {
+                "type": "string",
+                "value": "TiddlyWikiIconBlack.png",
+                "start": 5,
+                "end": 28
+              }
+            },
+            "start": 0,
+            "end": 30,
+            "rule": "image"
+          },
+          "rule": "image",
+          "type": "widget",
+          "isElement": true,
+          "isVoid": true,
+          "children": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "rule": "parseblock"
+    }
+  ],
+  "transclude": [
+    {
+      "node": {
+        "type": "tiddler",
+        "attributes": {
+          "tiddler": {
+            "name": "tiddler",
+            "type": "string",
+            "value": "favicon.ico"
+          }
+        },
+        "isBlock": true,
+        "children": [
+          {
+            "type": "transclude",
+            "attributes": {
+              "$tiddler": {
+                "name": "$tiddler",
+                "type": "string",
+                "value": "favicon.ico"
+              }
+            },
+            "isBlock": true
+          }
+        ],
+        "start": 0,
+        "end": 15,
+        "rule": "transcludeblock"
       },
-      "language": {
-        "type": "string",
-        "value": "tid",
-        "start": 3,
-        "end": 6
-      }
+      "rule": "transcludeblock",
+      "type": "widget",
+      "isElement": true,
+      "isVoid": true,
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "list widget": [
+    {
+      "type": "p",
+      "children": [
+        {
+          "node": {
+            "type": "list",
+            "start": 0,
+            "attributes": {
+              "filter": {
+                "start": 6,
+                "name": "filter",
+                "type": "string",
+                "value": "[tag[ExampleTag]sort[title]]",
+                "end": 44
+              }
+            },
+            "orderedAttributes": [
+              {
+                "start": 6,
+                "name": "filter",
+                "type": "string",
+                "value": "[tag[ExampleTag]sort[title]]",
+                "end": 44
+              }
+            ],
+            "tag": "$list",
+            "isSelfClosing": true,
+            "end": 47,
+            "isBlock": false,
+            "rule": "html"
+          },
+          "rule": "html",
+          "type": "widget",
+          "isElement": true,
+          "isVoid": true,
+          "children": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "rule": "parseblock"
+    }
+  ],
+  "list widget block": [
+    {
+      "node": {
+        "type": "list",
+        "start": 0,
+        "attributes": {
+          "filter": {
+            "start": 6,
+            "name": "filter",
+            "type": "string",
+            "value": "[tag[ExampleTag]sort[title]]",
+            "end": 44
+          }
+        },
+        "orderedAttributes": [
+          {
+            "start": 6,
+            "name": "filter",
+            "type": "string",
+            "value": "[tag[ExampleTag]sort[title]]",
+            "end": 44
+          }
+        ],
+        "tag": "$list",
+        "isSelfClosing": true,
+        "end": 47,
+        "isBlock": true,
+        "rule": "html"
+      },
+      "rule": "html",
+      "type": "widget",
+      "isElement": true,
+      "isVoid": true,
+      "children": [
+        {
+          "text": ""
+        }
+      ]
     },
-    "type": "codeblock",
-    "rule": "codeblock",
-    "isElement": true,
-    "isVoid": true,
-    "language": "tid",
-    "code": "<$list filter=\"[tag[ExampleTag]sort[title]]\"/>",
-    "children": [
-      {
-        "text": ""
-      }
-    ]
-  }
-]
+    {
+      "type": "p",
+      "children": [
+        {
+          "text": "aaa"
+        }
+      ],
+      "rule": "parseblock"
+    }
+  ],
+  "link": [
+    {
+      "type": "p",
+      "children": [
+        {
+          "type": "a",
+          "rule": "prettylink",
+          "url": "ExampleTag",
+          "children": [
+            {
+              "text": "ExampleTag"
+            }
+          ]
+        }
+      ],
+      "rule": "parseblock"
+    }
+  ],
+  "empty link": [
+    {
+      "type": "p",
+      "children": [
+        {
+          "type": "a",
+          "rule": "prettylink",
+          "url": "",
+          "children": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "rule": "parseblock"
+    }
+  ],
+  "alias link": [
+    {
+      "type": "p",
+      "children": [
+        {
+          "type": "a",
+          "rule": "prettylink",
+          "url": "ExampleTag",
+          "children": [
+            {
+              "text": "SomeText"
+            }
+          ]
+        }
+      ],
+      "rule": "parseblock"
+    }
+  ],
+  "external link": [
+    {
+      "type": "p",
+      "children": [
+        {
+          "type": "a",
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "rule": "html"
+        }
+      ],
+      "rule": "parseblock"
+    },
+    {
+      "type": "p",
+      "children": [
+        {
+          "type": "a",
+          "children": [
+            {
+              "text": "TW5"
+            }
+          ],
+          "rule": "prettyextlink"
+        }
+      ],
+      "rule": "parseblock"
+    },
+    {
+      "type": "p",
+      "children": [
+        {
+          "type": "a",
+          "children": [
+            {
+              "text": "Mail me"
+            }
+          ],
+          "rule": "prettyextlink"
+        }
+      ],
+      "rule": "parseblock"
+    },
+    {
+      "type": "p",
+      "children": [
+        {
+          "type": "a",
+          "children": [
+            {
+              "text": "Open file"
+            }
+          ],
+          "rule": "prettyextlink"
+        }
+      ],
+      "rule": "parseblock"
+    },
+    {
+      "type": "p",
+      "children": [
+        {
+          "type": "a",
+          "children": [
+            {
+              "text": "Top"
+            }
+          ],
+          "rule": "html"
+        }
+      ],
+      "rule": "parseblock"
+    }
+  ],
+  "link in a list": [
+    {
+      "type": "ol",
+      "children": [
+        {
+          "type": "li",
+          "children": [
+            {
+              "type": "lic",
+              "children": [
+                {
+                  "text": "AAA"
+                }
+              ]
+            },
+            {
+              "type": "ol",
+              "children": [
+                {
+                  "type": "li",
+                  "children": [
+                    {
+                      "type": "lic",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "a",
+                          "rule": "prettylink",
+                          "url": "BBB",
+                          "children": [
+                            {
+                              "text": "BBB"
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ol",
+                      "children": [
+                        {
+                          "type": "li",
+                          "children": [
+                            {
+                              "type": "lic",
+                              "children": [
+                                {
+                                  "text": "CCC"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "heading": [
+    {
+      "type": "h1",
+      "children": [
+        {
+          "text": "AAA"
+        }
+      ],
+      "rule": "heading"
+    },
+    {
+      "type": "h2",
+      "children": [
+        {
+          "text": "AAA"
+        }
+      ],
+      "rule": "heading"
+    },
+    {
+      "type": "h3",
+      "children": [
+        {
+          "text": "AAA"
+        }
+      ],
+      "rule": "heading"
+    },
+    {
+      "type": "h4",
+      "children": [
+        {
+          "text": "AAA"
+        }
+      ],
+      "rule": "heading"
+    },
+    {
+      "type": "h5",
+      "children": [
+        {
+          "text": "AAA"
+        }
+      ],
+      "rule": "heading"
+    },
+    {
+      "type": "h6",
+      "children": [
+        {
+          "text": "AAA"
+        }
+      ],
+      "rule": "heading"
+    },
+    {
+      "type": "p",
+      "children": [
+        {
+          "text": "AAA"
+        }
+      ],
+      "rule": "parseblock"
+    }
+  ],
+  "rpn": [
+    {
+      "type": "p",
+      "children": [
+        {
+          "node": {
+            "type": "macrocall",
+            "start": 0,
+            "attributes": {
+              "$name": {
+                "start": 11,
+                "name": "$name",
+                "type": "string",
+                "value": "rpn",
+                "end": 23
+              },
+              "a": {
+                "start": 23,
+                "name": "a",
+                "type": "macro",
+                "value": {
+                  "type": "macrocall",
+                  "start": 26,
+                  "params": [
+                    {
+                      "type": "macro-parameter",
+                      "start": 31,
+                      "value": "2",
+                      "end": 33
+                    },
+                    {
+                      "type": "macro-parameter",
+                      "start": 33,
+                      "value": "2",
+                      "end": 35
+                    },
+                    {
+                      "type": "macro-parameter",
+                      "start": 35,
+                      "value": "*",
+                      "end": 37
+                    }
+                  ],
+                  "name": "rpn",
+                  "end": 39
+                },
+                "end": 39
+              },
+              "b": {
+                "start": 39,
+                "name": "b",
+                "type": "string",
+                "value": "pi",
+                "end": 46
+              },
+              "operation": {
+                "start": 46,
+                "name": "operation",
+                "type": "string",
+                "value": "*",
+                "end": 60
+              },
+              "decimals": {
+                "start": 60,
+                "name": "decimals",
+                "type": "string",
+                "value": "4",
+                "end": 73
+              }
+            },
+            "orderedAttributes": [
+              {
+                "start": 11,
+                "name": "$name",
+                "type": "string",
+                "value": "rpn",
+                "end": 23
+              },
+              {
+                "start": 23,
+                "name": "a",
+                "type": "macro",
+                "value": {
+                  "type": "macrocall",
+                  "start": 26,
+                  "params": [
+                    {
+                      "type": "macro-parameter",
+                      "start": 31,
+                      "value": "2",
+                      "end": 33
+                    },
+                    {
+                      "type": "macro-parameter",
+                      "start": 33,
+                      "value": "2",
+                      "end": 35
+                    },
+                    {
+                      "type": "macro-parameter",
+                      "start": 35,
+                      "value": "*",
+                      "end": 37
+                    }
+                  ],
+                  "name": "rpn",
+                  "end": 39
+                },
+                "end": 39
+              },
+              {
+                "start": 39,
+                "name": "b",
+                "type": "string",
+                "value": "pi",
+                "end": 46
+              },
+              {
+                "start": 46,
+                "name": "operation",
+                "type": "string",
+                "value": "*",
+                "end": 60
+              },
+              {
+                "start": 60,
+                "name": "decimals",
+                "type": "string",
+                "value": "4",
+                "end": 73
+              }
+            ],
+            "tag": "$macrocall",
+            "isSelfClosing": true,
+            "end": 76,
+            "isBlock": false,
+            "rule": "html"
+          },
+          "rule": "html",
+          "type": "widget",
+          "isElement": true,
+          "isVoid": true,
+          "children": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "rule": "parseblock"
+    }
+  ],
+  "macro alert": [
+    {
+      "node": {
+        "type": "transclude",
+        "start": 0,
+        "end": 47,
+        "attributes": {
+          "0": {
+            "name": "0",
+            "type": "string",
+            "value": "primary",
+            "start": 7,
+            "end": 17
+          },
+          "1": {
+            "name": "1",
+            "type": "string",
+            "value": "primary alert",
+            "start": 17,
+            "end": 33
+          },
+          "$variable": {
+            "name": "$variable",
+            "type": "string",
+            "value": "alert"
+          },
+          "width": {
+            "name": "width",
+            "type": "string",
+            "value": "60%",
+            "start": 33,
+            "end": 45
+          }
+        },
+        "orderedAttributes": [
+          {
+            "name": "$variable",
+            "type": "string",
+            "value": "alert"
+          },
+          {
+            "name": "0",
+            "type": "string",
+            "value": "primary",
+            "start": 7,
+            "end": 17
+          },
+          {
+            "name": "1",
+            "type": "string",
+            "value": "primary alert",
+            "start": 17,
+            "end": 33
+          },
+          {
+            "name": "width",
+            "type": "string",
+            "value": "60%",
+            "start": 33,
+            "end": 45
+          }
+        ],
+        "isBlock": true,
+        "rule": "macrocallblock"
+      },
+      "rule": "macrocallblock",
+      "type": "transclude",
+      "isElement": true,
+      "isVoid": true,
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "codeblock": [
+    {
+      "type": "codeblock",
+      "rule": "codeblock",
+      "isElement": true,
+      "isVoid": true,
+      "language": "tid",
+      "code": "<$list filter=\"[tag[ExampleTag]sort[title]]\"/>",
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "tableGettingStarted": [
+    {
+      "node": {
+        "type": "set",
+        "attributes": {
+          "name": {
+            "name": "name",
+            "type": "string",
+            "value": "lingo-base"
+          },
+          "value": {
+            "name": "value",
+            "type": "string",
+            "value": "$:/language/ControlPanel/Basics/"
+          }
+        },
+        "params": [],
+        "isMacroDefinition": true,
+        "isBlock": true,
+        "orderedAttributes": [
+          {
+            "name": "name",
+            "type": "string",
+            "value": "lingo-base"
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "value": "$:/language/ControlPanel/Basics/"
+          }
+        ],
+        "start": 0,
+        "end": 53,
+        "rule": "macrodef"
+      },
+      "type": "set",
+      "isElement": true,
+      "isVoid": true,
+      "children": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "欢迎使用 "
+            },
+            {
+              "text": "TiddlyWiki",
+              "rule": "wikilinkprefix"
+            },
+            {
+              "text": " 及参与 "
+            },
+            {
+              "text": "TiddlyWiki",
+              "rule": "wikilinkprefix"
+            },
+            {
+              "text": " 社群"
+            }
+          ],
+          "rule": "parseblock"
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "开始将重要资讯存放于 "
+            },
+            {
+              "text": "TiddlyWiki",
+              "rule": "wikilinkprefix"
+            },
+            {
+              "text": " 之前，确认您可以可靠地保存变更是很重要的。详细资讯请参阅 "
+            },
+            {
+              "type": "a",
+              "children": [
+                {
+                  "text": "https://tiddlywiki.com/#GettingStarted"
+                }
+              ],
+              "rule": "extlink"
+            }
+          ],
+          "rule": "parseblock"
+        },
+        {
+          "type": "h2",
+          "children": [
+            {
+              "text": "设置此 "
+            },
+            {
+              "text": "TiddlyWiki",
+              "rule": "wikilinkprefix"
+            }
+          ],
+          "rule": "heading"
+        },
+        {
+          "type": "div",
+          "children": [
+            {
+              "type": "table",
+              "children": [
+                {
+                  "type": "tr",
+                  "children": [
+                    {
+                      "type": "td",
+                      "children": [
+                        {
+                          "type": "a",
+                          "rule": "html",
+                          "url": "$:/SiteTitle",
+                          "children": [
+                            {}
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "td",
+                      "children": [
+                        {
+                          "node": {
+                            "type": "edit-text",
+                            "start": 293,
+                            "attributes": {
+                              "tiddler": {
+                                "start": 304,
+                                "name": "tiddler",
+                                "type": "string",
+                                "value": "$:/SiteTitle",
+                                "end": 327
+                              },
+                              "default": {
+                                "start": 327,
+                                "name": "default",
+                                "type": "string",
+                                "value": "",
+                                "end": 338
+                              },
+                              "tag": {
+                                "start": 338,
+                                "name": "tag",
+                                "type": "string",
+                                "value": "input",
+                                "end": 350
+                              }
+                            },
+                            "orderedAttributes": [
+                              {
+                                "start": 304,
+                                "name": "tiddler",
+                                "type": "string",
+                                "value": "$:/SiteTitle",
+                                "end": 327
+                              },
+                              {
+                                "start": 327,
+                                "name": "default",
+                                "type": "string",
+                                "value": "",
+                                "end": 338
+                              },
+                              {
+                                "start": 338,
+                                "name": "tag",
+                                "type": "string",
+                                "value": "input",
+                                "end": 350
+                              }
+                            ],
+                            "tag": "$edit-text",
+                            "isSelfClosing": true,
+                            "end": 353,
+                            "isBlock": false,
+                            "rule": "html"
+                          },
+                          "rule": "html",
+                          "type": "widget",
+                          "isElement": true,
+                          "isVoid": true,
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tr",
+                  "children": [
+                    {
+                      "type": "td",
+                      "children": [
+                        {
+                          "type": "a",
+                          "rule": "html",
+                          "url": "$:/SiteSubtitle",
+                          "children": [
+                            {}
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "td",
+                      "children": [
+                        {
+                          "node": {
+                            "type": "edit-text",
+                            "start": 420,
+                            "attributes": {
+                              "tiddler": {
+                                "start": 431,
+                                "name": "tiddler",
+                                "type": "string",
+                                "value": "$:/SiteSubtitle",
+                                "end": 457
+                              },
+                              "default": {
+                                "start": 457,
+                                "name": "default",
+                                "type": "string",
+                                "value": "",
+                                "end": 468
+                              },
+                              "tag": {
+                                "start": 468,
+                                "name": "tag",
+                                "type": "string",
+                                "value": "input",
+                                "end": 480
+                              }
+                            },
+                            "orderedAttributes": [
+                              {
+                                "start": 431,
+                                "name": "tiddler",
+                                "type": "string",
+                                "value": "$:/SiteSubtitle",
+                                "end": 457
+                              },
+                              {
+                                "start": 457,
+                                "name": "default",
+                                "type": "string",
+                                "value": "",
+                                "end": 468
+                              },
+                              {
+                                "start": 468,
+                                "name": "tag",
+                                "type": "string",
+                                "value": "input",
+                                "end": 480
+                              }
+                            ],
+                            "tag": "$edit-text",
+                            "isSelfClosing": true,
+                            "end": 483,
+                            "isBlock": false,
+                            "rule": "html"
+                          },
+                          "rule": "html",
+                          "type": "widget",
+                          "isElement": true,
+                          "isVoid": true,
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tr",
+                  "children": [
+                    {
+                      "type": "td",
+                      "children": [
+                        {
+                          "type": "a",
+                          "rule": "html",
+                          "url": "$:/DefaultTiddlers",
+                          "children": [
+                            {}
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "td",
+                      "children": [
+                        {
+                          "node": {
+                            "type": "transclude",
+                            "start": 560,
+                            "end": 593,
+                            "attributes": {
+                              "0": {
+                                "name": "0",
+                                "type": "string",
+                                "value": "DefaultTiddlers/TopHint",
+                                "start": 567,
+                                "end": 591
+                              },
+                              "$variable": {
+                                "name": "$variable",
+                                "type": "string",
+                                "value": "lingo"
+                              }
+                            },
+                            "orderedAttributes": [
+                              {
+                                "name": "$variable",
+                                "type": "string",
+                                "value": "lingo"
+                              },
+                              {
+                                "name": "0",
+                                "type": "string",
+                                "value": "DefaultTiddlers/TopHint",
+                                "start": 567,
+                                "end": 591
+                              }
+                            ],
+                            "rule": "macrocallinline"
+                          },
+                          "rule": "macrocallinline",
+                          "type": "transclude",
+                          "isElement": true,
+                          "isVoid": true,
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "type": "br",
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ],
+                          "rule": "html"
+                        },
+                        {
+                          "type": "p",
+                          "rule": "parseblock",
+                          "children": [
+                            {
+                              "text": " "
+                            }
+                          ]
+                        },
+                        {
+                          "node": {
+                            "type": "edit",
+                            "start": 598,
+                            "attributes": {
+                              "tag": {
+                                "start": 604,
+                                "name": "tag",
+                                "type": "string",
+                                "value": "textarea",
+                                "end": 619
+                              },
+                              "tiddler": {
+                                "start": 619,
+                                "name": "tiddler",
+                                "type": "string",
+                                "value": "$:/DefaultTiddlers",
+                                "end": 648
+                              }
+                            },
+                            "orderedAttributes": [
+                              {
+                                "start": 604,
+                                "name": "tag",
+                                "type": "string",
+                                "value": "textarea",
+                                "end": 619
+                              },
+                              {
+                                "start": 619,
+                                "name": "tiddler",
+                                "type": "string",
+                                "value": "$:/DefaultTiddlers",
+                                "end": 648
+                              }
+                            ],
+                            "tag": "$edit",
+                            "isSelfClosing": true,
+                            "end": 651,
+                            "isBlock": false,
+                            "rule": "html"
+                          },
+                          "rule": "html",
+                          "type": "widget",
+                          "isElement": true,
+                          "isVoid": true,
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "type": "br",
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ],
+                          "rule": "html"
+                        },
+                        {
+                          "node": {
+                            "type": "transclude",
+                            "start": 657,
+                            "end": 693,
+                            "attributes": {
+                              "0": {
+                                "name": "0",
+                                "type": "string",
+                                "value": "DefaultTiddlers/BottomHint",
+                                "start": 664,
+                                "end": 691
+                              },
+                              "$variable": {
+                                "name": "$variable",
+                                "type": "string",
+                                "value": "lingo"
+                              }
+                            },
+                            "orderedAttributes": [
+                              {
+                                "name": "$variable",
+                                "type": "string",
+                                "value": "lingo"
+                              },
+                              {
+                                "name": "0",
+                                "type": "string",
+                                "value": "DefaultTiddlers/BottomHint",
+                                "start": 664,
+                                "end": 691
+                              }
+                            ],
+                            "rule": "macrocallinline"
+                          },
+                          "rule": "macrocallinline",
+                          "type": "transclude",
+                          "isElement": true,
+                          "isVoid": true,
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "rule": "table"
+            }
+          ],
+          "rule": "html"
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "请参阅"
+            },
+            {
+              "type": "a",
+              "rule": "prettylink",
+              "url": "$:/ControlPanel",
+              "children": [
+                {
+                  "text": "控制台"
+                }
+              ]
+            },
+            {
+              "text": "查看更多选项。"
+            }
+          ],
+          "rule": "parseblock"
+        }
+      ]
+    }
+  ],
+  "table": [
+    {
+      "type": "table",
+      "children": [
+        {
+          "type": "tr",
+          "children": [
+            {
+              "type": "td",
+              "children": [
+                {
+                  "type": "p",
+                  "rule": "parseblock",
+                  "children": [
+                    {
+                      "text": "cell one"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "td",
+              "children": [
+                {
+                  "type": "p",
+                  "rule": "parseblock",
+                  "children": [
+                    {
+                      "text": "cell two"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tr",
+          "children": [
+            {
+              "type": "td",
+              "children": [
+                {
+                  "type": "p",
+                  "rule": "parseblock",
+                  "children": [
+                    {
+                      "text": "cell three"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "td",
+              "children": [
+                {
+                  "type": "p",
+                  "rule": "parseblock",
+                  "children": [
+                    {
+                      "text": "cell four"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rule": "table"
+    }
+  ],
+  "setDefine": [
+    {
+      "node": {
+        "type": "set",
+        "attributes": {
+          "name": {
+            "name": "name",
+            "type": "string",
+            "value": "lingo-base"
+          },
+          "value": {
+            "name": "value",
+            "type": "string",
+            "value": "$:/language/ControlPanel/Basics/"
+          }
+        },
+        "params": [],
+        "isMacroDefinition": true,
+        "isBlock": true,
+        "orderedAttributes": [
+          {
+            "name": "name",
+            "type": "string",
+            "value": "lingo-base"
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "value": "$:/language/ControlPanel/Basics/"
+          }
+        ],
+        "start": 0,
+        "end": 53,
+        "rule": "macrodef"
+      },
+      "type": "set",
+      "isElement": true,
+      "isVoid": true,
+      "children": [
+        {
+          "node": {
+            "type": "transclude",
+            "start": 55,
+            "end": 79,
+            "attributes": {
+              "0": {
+                "name": "0",
+                "type": "string",
+                "value": "Title/Prompt",
+                "start": 62,
+                "end": 77
+              },
+              "$variable": {
+                "name": "$variable",
+                "type": "string",
+                "value": "lingo"
+              }
+            },
+            "orderedAttributes": [
+              {
+                "name": "$variable",
+                "type": "string",
+                "value": "lingo"
+              },
+              {
+                "name": "0",
+                "type": "string",
+                "value": "Title/Prompt",
+                "start": 62,
+                "end": 77
+              }
+            ],
+            "isBlock": true,
+            "rule": "macrocallblock"
+          },
+          "rule": "macrocallblock",
+          "type": "transclude",
+          "isElement": true,
+          "isVoid": true,
+          "children": [
+            {
+              "text": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

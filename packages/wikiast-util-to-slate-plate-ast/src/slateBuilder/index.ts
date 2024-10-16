@@ -5,6 +5,7 @@
 export * from './codeblock';
 export * from './element/index';
 export * from './link';
+export * from './parseblock';
 export * from './set';
 export * from './text';
 export * from './transclude';

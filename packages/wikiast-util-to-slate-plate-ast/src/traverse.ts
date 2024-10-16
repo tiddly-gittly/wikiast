@@ -1,8 +1,6 @@
-import { type TNode } from '@udecode/slate';
-import { type ICustomParseTreeNode, type IParseTreeNode } from 'tiddlywiki';
+import type { TNode, TText } from '@udecode/slate';
+import { type IParseTreeNode } from 'tiddlywiki';
 import type { IContext } from '.';
-
-import { getWikiASTAdditionalProperties } from 'wikiast-utils';
 
 export function convertNodes(context: IContext, nodes: IParseTreeNode[] | undefined): TNode[] {
   if (nodes === undefined || nodes.length === 0) {
@@ -16,23 +14,22 @@ export function convertNodes(context: IContext, nodes: IParseTreeNode[] | undefi
 
 export function slateNode(context: IContext, node: IParseTreeNode): TNode[] {
   const id = context.idCreator?.();
-  const withId = (nodeToAddId: TNode): TNode => (id === undefined ? nodeToAddId : { ...nodeToAddId, id });
-  if (node.type in context.builders) {
-    const builder = context.builders[node.type as keyof IContext['builders']];
+  const withId = (nodeToAddId: TNode | TText): TNode | TText => (id === undefined ? nodeToAddId : { ...nodeToAddId, id });
+  if ('rule' in node && node.rule !== undefined && node.rule in context.builders) {
+    const builder = context.builders[node.rule as keyof IContext['builders']];
     if (typeof builder === 'function') {
       // basic elements
       const builtSlateNodeOrNodes = builder(context, node as never);
       return Array.isArray(builtSlateNodeOrNodes)
-        ? builtSlateNodeOrNodes.map((child) => withId({ ...getWikiASTAdditionalProperties(node), ...child }))
-        : ([withId({ ...getWikiASTAdditionalProperties(node), ...builtSlateNodeOrNodes })] as TNode[]);
+        ? builtSlateNodeOrNodes.map((child) => withId(child))
+        : ([withId(builtSlateNodeOrNodes)] as TNode[]);
     }
+  } else if ('text' in node) {
+    // text node
+    return [withId({ text: node.text } as TText)];
   } else {
-    // widget
-    // I guess this rule is enough for judge the current node is a widget? see `test/constants/wikiAst/widget.ts` for example.
-    if (typeof node.type === 'string' && 'tag' in node && typeof node.tag === 'string') {
-      const widgetNode = withId({ ...getWikiASTAdditionalProperties, ...context.builders.widget(context, node as ICustomParseTreeNode) } as TNode);
-      return [widgetNode];
-    }
+    console.warn(`WikiAst get Unknown node type: ${JSON.stringify(node)}`);
+    return [];
   }
   return [];
 }

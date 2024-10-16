@@ -4,7 +4,7 @@ import { IParseTreeNode } from 'tiddlywiki';
 /**
  * Need to use `type: 'text' as const,`.
  */
-export const p: Record<string, IParseTreeNode[] | IParseTreeNode> = {
+export const text: Record<string, IParseTreeNode[] | IParseTreeNode> = {
   text: {
     type: 'text',
     text: 'AAA',

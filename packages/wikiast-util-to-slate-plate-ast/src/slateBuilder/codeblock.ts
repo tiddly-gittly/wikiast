@@ -12,7 +12,6 @@ export function codeblock(context: IContext, node: ICodeBlockParseTreeNode): TEl
   const code = node.attributes.code?.value ?? '';
   return {
     type: ELEMENT_CODE_BLOCK,
-    rule: node.rule,
     isElement: true,
     isVoid: true,
     language,

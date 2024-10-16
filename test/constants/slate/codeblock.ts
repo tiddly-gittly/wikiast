@@ -1,28 +1,10 @@
 import { TEditor, TElement, TText, Value } from '@udecode/slate';
+import { ELEMENT_CODE_BLOCK } from 'wikiast-utils';
 
 export const codeblock: Record<string, TEditor<Value> | TElement | TText | Array<TEditor<Value> | TElement | TText>> = {
   codeblock: [
     {
-      attributes: {
-        code: '<$list filter="[tag[ExampleTag]sort[title]]"/>',
-        language: 'tid',
-      },
-      'tw-attributes': {
-        code: {
-          type: 'string',
-          value: '<$list filter="[tag[ExampleTag]sort[title]]"/>',
-          start: 7,
-          end: 57,
-        },
-        language: {
-          type: 'string',
-          value: 'tid',
-          start: 3,
-          end: 6,
-        },
-      },
-      type: 'codeblock',
-      rule: 'codeblock',
+      type: ELEMENT_CODE_BLOCK,
       isElement: true,
       isVoid: true,
       language: 'tid',

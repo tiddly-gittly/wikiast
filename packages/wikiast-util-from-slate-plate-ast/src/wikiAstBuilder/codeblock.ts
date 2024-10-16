@@ -19,6 +19,7 @@ export function codeblock(builders: IBuilders, node: TElement): ICodeBlockParseT
   };
   return {
     type: 'codeblock',
+    rule: 'codeblock',
     attributes,
   };
 }

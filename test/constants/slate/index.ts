@@ -8,6 +8,7 @@ import { macro } from './macro';
 import { ol } from './ol';
 import { set } from './set';
 import { table } from './table';
+import { text } from './text';
 import { transclude } from './transclude';
 import { widget } from './widget';
 
@@ -27,6 +28,5 @@ export const slateDict: Record<string, TEditor<Value> | TElement | TText | Array
   ...macro,
   ...table,
   ...set,
-  text: [{ text: 'AAA' }],
-  'p > text': { type: 'p', rule: 'parseblock', children: [{ text: 'AAA' }] },
+  ...text,
 };

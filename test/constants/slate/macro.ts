@@ -129,6 +129,7 @@ export const macro: Record<string, TEditor<Value> | TElement | TText | Array<TEd
         isBlock: true,
         rule: 'macrocallblock',
       },
+      rule: 'macrocallblock',
       type: 'transclude',
       isElement: true,
       isVoid: true,
